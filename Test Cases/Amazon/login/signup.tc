@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>signup</name>
+   <tag>login</tag>
+   <comment></comment>
+   <testCaseGuid>53cf0bae-61f9-45de-9b60-cf7829bf0425</testCaseGuid>
+</TestCaseEntity>
