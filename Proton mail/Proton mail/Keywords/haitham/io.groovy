@@ -20,36 +20,29 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
+import java.io.File
 
-public class TabControl {
+public class io {
 	@Keyword
-	def openTab() {
-		try {
-			def js = 'window.open();'
-			WebUI.executeJavaScript(js, [])
-			println 'A new tab has been successfully opened'
+	def readFromFile(def filePath) {
+		def lines=[],userindex=0
+		new File(filePath).eachLine{ line->
+			def splittedLine=line.split(','),userInfo=[:]
+			userInfo.put('id',userindex)
+			userInfo.put('username',splittedLine[0])
+			userInfo.put('password',splittedLine[1])
+			lines.add(userInfo)
+			userindex+=1
 		}
-		catch(Exception e) {
-			println 'Unable to open a new tab'
-		}
+		println (lines)
 	}
 	@Keyword
-	def getCurrentTabIndex() {
-		try {
-			return WebUI.getWindowIndex()
-		}
-		catch(Exception e) {
-			println 'Unable to get current tab index'
-			return null
-		}
-	}
-	@Keyword
-	def switchTab(def tabIndex=0) {
-		try{
-			WebUI.switchToWindowIndex(tabIndex)
-		}
-		catch(Exception e) {
-			println 'Unable to switch to targeted tab'
-		}
+	def writeOnFile(def filePath,def outputs,def writingStatus='append') {
+		if(writingStatus =='append') {
+			for(line in outputs) {
+				File output = new File(filePath)
+						output.withWriterAppend { out-> out.println(line) }		
+			}				
+			}
 	}
 }

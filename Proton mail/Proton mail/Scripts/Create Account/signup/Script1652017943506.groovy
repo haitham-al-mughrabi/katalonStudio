@@ -14,8 +14,11 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.sun.org.apache.xpath.internal.compiler.Keywords
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+
+
 try {
 	WebUI.openBrowser('https://protonmail.com/')
 	
@@ -53,17 +56,21 @@ try {
 	
 	WebUI.verifyElementText(findTestObject('Object Repository/protonmail/VerifyText/usernameEmptyInputFieldErrorMessage'),'This field is required')
 	
-	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/userNameInputForm'), 'test123493-2ir2')
+	def generatedUserName=CustomKeywords.'haitham.Generators.generateComplexRandomText'(15)
+	
+	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/userNameInputForm'), generatedUserName)
 	
 	WebUI.switchToDefaultContent()
 	
 	WebUI.verifyElementText(findTestObject('Object Repository/protonmail/VerifyText/passwordMustContainErrorMessage'),'Password must contain at least 8 characters')
-		
-	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/passwordInputForm'), 'password')
+	
+	def generatedPassword = CustomKeywords.'haitham.Generators.generateStrongPassword'()
+	
+	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/passwordInputForm'), generatedPassword)
 	
 	WebUI.verifyElementText(findTestObject('Object Repository/protonmail/VerifyText/repeatPassswordMustContainErrorMessage'),'Password must contain at least 8 characters')
 	
-	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/repeatPasswordInputForm'), 'password')
+	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/repeatPasswordInputForm'), generatedPassword)
 	
 	WebUI.click(findTestObject('Object Repository/protonmail/nextButtonSignupPage'))
 	
@@ -80,6 +87,8 @@ try {
 	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/emailVerficationInputForm'), tempEmail)
 	
 	WebUI.click(findTestObject('Object Repository/protonmail/getVerificationCodeButton'))
+	
+	WebUI.delay(10)
 	
 	CustomKeywords.'haitham.TabControl.switchTab'(yopmailPageIndex)
 	
@@ -106,7 +115,11 @@ try {
 	for (i in 1..3)
 		WebUI.click(findTestObject('Object Repository/protonmail/getStartedNextButton'))
 	
-	WebUI.delay(30)
+	WebUI.delay(5)
+	
+	def userinfo=['username':generatedUserName,'password':generatedPassword]
+	
+	CustomKeywords.'haitham.io.writeOnFile'()
 	
 	WebUI.closeBrowser()
 	
