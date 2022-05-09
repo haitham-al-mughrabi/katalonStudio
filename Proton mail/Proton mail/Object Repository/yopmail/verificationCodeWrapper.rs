@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>verificationCodeWrapper</name>
+   <tag></tag>
+   <elementGuidId>bf164fe8-de95-40f8-ad7c-c1587dcc008a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='mail']//code</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//div[@id='mail']//code</value>
+      <webElementGuid>15cf060c-f830-4b83-97e2-9091d8c3bdf0</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

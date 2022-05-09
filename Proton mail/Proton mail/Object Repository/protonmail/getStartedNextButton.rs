@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>getStartedNextButton</name>
+   <tag></tag>
+   <elementGuidId>bc5f777d-4037-4216-9d4a-57e7e64f2147</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[text()='Next']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//button[text()='Next']</value>
+      <webElementGuid>1f86f598-a78f-4fbe-8c70-d6989a90e152</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

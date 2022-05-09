@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>skipRecoveryMethodButton</name>
+   <tag></tag>
+   <elementGuidId>7fcd9ac5-37df-4df7-976b-77cc17fba1eb</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[text()='Skip']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//button[text()='Skip']</value>
+      <webElementGuid>ec9c5d68-23e9-4b85-82b5-cbb47fe2090c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>emailTabVerificationPopup</name>
+   <tag></tag>
+   <elementGuidId>9a0ea6da-f62f-48f1-8dd1-b34c9606d68b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[@class=&quot;tabs-list-item&quot;]/button[text()='Email']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//li[@class=&quot;tabs-list-item&quot;]/button[text()='Email']</value>
+      <webElementGuid>a68b6887-faee-41ee-89d0-7bbdbadb7e9b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
