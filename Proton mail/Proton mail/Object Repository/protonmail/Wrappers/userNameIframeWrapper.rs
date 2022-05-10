@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>confirmSkippingRecoveryMethodButton</name>
+   <name>userNameIframeWrapper</name>
    <tag></tag>
-   <elementGuidId>fcff2bfe-0944-4b87-ba90-871d13def36a</elementGuidId>
+   <elementGuidId>c197cd3e-98fd-48e6-883c-24028d4a36c5</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()='Confirm']</value>
+         <value>//form[@name=&quot;accountForm&quot;]/div/iframe</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,7 +19,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//button[text()='Confirm']</value>
-      <webElementGuid>4b283c16-2002-4f7b-b637-fd83ddeb6426</webElementGuid>
+      <value>//form[@name=&quot;accountForm&quot;]/div/iframe</value>
+      <webElementGuid>9ecd03a9-c10a-4487-a1f3-4b0af2fb36a1</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

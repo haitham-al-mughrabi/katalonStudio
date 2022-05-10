@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>getStartedButton</name>
+   <name>signupPageTitle</name>
    <tag></tag>
-   <elementGuidId>2f876edb-907a-48a5-9819-3c04f7994edb</elementGuidId>
+   <elementGuidId>fb6c2fd0-d7f6-4899-be04-a04e25ce268a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()='Get started']</value>
+         <value>//h1[contains(@class,'sign-layout-title')]/strong</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,7 +19,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//button[text()='Get started']</value>
-      <webElementGuid>16a8d35e-f598-4b4c-939f-648aafd7729f</webElementGuid>
+      <value>//h1[contains(@class,'sign-layout-title')]/strong</value>
+      <webElementGuid>e8469623-84b0-4ec4-8e0d-6a4cf538be70</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

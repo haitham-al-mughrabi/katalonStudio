@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>userNameIframeWrapper</name>
+   <description>inbox button on dashboard page</description>
+   <name>inboxButton</name>
    <tag></tag>
-   <elementGuidId>c197cd3e-98fd-48e6-883c-24028d4a36c5</elementGuidId>
+   <elementGuidId>f4a6fa3a-a203-4949-9289-27b15e14ad3c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//form[@name=&quot;accountForm&quot;]/div/iframe</value>
+         <value>//span[text()='Inbox']</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -20,7 +20,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//form[@name=&quot;accountForm&quot;]/div/iframe</value>
-      <webElementGuid>9ecd03a9-c10a-4487-a1f3-4b0af2fb36a1</webElementGuid>
+      <value>//span[text()='Inbox']</value>
+      <webElementGuid>f94fa661-dcec-4094-97ac-813042a3a277</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

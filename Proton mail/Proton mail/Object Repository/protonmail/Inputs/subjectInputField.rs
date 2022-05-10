@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>nextButtonSignupPage</name>
+   <description>email subject input field on new message popup</description>
+   <name>subjectInputField</name>
    <tag></tag>
-   <elementGuidId>6a17f3bc-be5a-4c0c-9848-a0daef0fcc25</elementGuidId>
+   <elementGuidId>5bf1ffd8-d109-488f-8d79-6cae23a5093c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()='Next']</value>
+         <value>//input[@data-testid=&quot;composer:subject&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -20,7 +20,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//button[text()='Next']</value>
-      <webElementGuid>5258b0ae-6788-4cab-9e1c-aed69be5c698</webElementGuid>
+      <value>//input[@data-testid=&quot;composer:subject&quot;]</value>
+      <webElementGuid>e0fa457b-3244-48d9-9820-8c4fcdf15963</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

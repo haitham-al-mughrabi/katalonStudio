@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>selectFreePlanButton</name>
+   <name>freePlanDiv</name>
    <tag></tag>
-   <elementGuidId>7118079c-cb39-47bb-bc2d-488094925236</elementGuidId>
+   <elementGuidId>6d09cb80-eed5-48c5-9e0b-0f9d0574b667</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[@id='freePlan']</value>
+         <value>//div[@role='tab' and @aria-controls='plan-free']</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,7 +19,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//button[@id='freePlan']</value>
-      <webElementGuid>76ee104b-85f1-42a9-9f4d-05ba7016b697</webElementGuid>
+      <value>//div[@role='tab' and @aria-controls='plan-free']</value>
+      <webElementGuid>7239af28-b445-41a8-a461-0e41a70af154</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

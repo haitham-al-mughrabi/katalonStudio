@@ -1,0 +1,46 @@
+{
+  "keywordFileContentHash": "A34D9880758EFED8CC9C3901CECB419A",
+  "keywordClasses": [
+    {
+      "name": "haitham.pathStuff",
+      "keywordMethods": [
+        {
+          "name": "getPath",
+          "parameters": []
+        },
+        {
+          "name": "setPath",
+          "parameters": [
+            {
+              "name": "rootPath",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "filePath",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "javadocParsed": false
+}

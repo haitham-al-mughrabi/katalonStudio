@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>accountTypeSpan</name>
+   <description>insert image or file button on new message wrapper</description>
+   <name>insertFileButton</name>
    <tag></tag>
-   <elementGuidId>634d18f0-1301-4bf3-929d-8db147cb3514</elementGuidId>
+   <elementGuidId>82e96d32-38f7-4447-b985-bd482199eea8</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[contains(@class,'text-center')]/h1</value>
+         <value>//button[.//span[text()='Insert image']]</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -20,7 +20,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//div[contains(@class,'text-center')]/h1</value>
-      <webElementGuid>91b388ee-8cbe-4de6-b36b-70ea0d28fd5b</webElementGuid>
+      <value>//button[.//span[text()='Insert image']]</value>
+      <webElementGuid>e14771b0-209b-4912-8d01-140e1cf78ea9</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>signupButton</name>
+   <name>nextButtonSignupPage</name>
    <tag></tag>
-   <elementGuidId>2ce1d70f-5fc0-4589-9417-b75921682132</elementGuidId>
+   <elementGuidId>6a17f3bc-be5a-4c0c-9848-a0daef0fcc25</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//a[@href='signup' and text()='SIGN UP']</value>
+         <value>//button[text()='Next']</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,7 +19,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//a[@href='signup' and text()='SIGN UP']</value>
-      <webElementGuid>3be5d2b5-46ae-4337-bb41-973f0620792e</webElementGuid>
+      <value>//button[text()='Next']</value>
+      <webElementGuid>5258b0ae-6788-4cab-9e1c-aed69be5c698</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>getStartedNextButton</name>
+   <name>selectFreePlanButton</name>
    <tag></tag>
-   <elementGuidId>bc5f777d-4037-4216-9d4a-57e7e64f2147</elementGuidId>
+   <elementGuidId>7118079c-cb39-47bb-bc2d-488094925236</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()='Next']</value>
+         <value>//button[@id='freePlan']</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,7 +19,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//button[text()='Next']</value>
-      <webElementGuid>1f86f598-a78f-4fbe-8c70-d6989a90e152</webElementGuid>
+      <value>//button[@id='freePlan']</value>
+      <webElementGuid>76ee104b-85f1-42a9-9f4d-05ba7016b697</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

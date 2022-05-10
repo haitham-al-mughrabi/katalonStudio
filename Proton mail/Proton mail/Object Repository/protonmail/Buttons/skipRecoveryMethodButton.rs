@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>verifyEmailButton</name>
+   <name>skipRecoveryMethodButton</name>
    <tag></tag>
-   <elementGuidId>7ac387f6-377d-4611-941f-b097f5202049</elementGuidId>
+   <elementGuidId>7fcd9ac5-37df-4df7-976b-77cc17fba1eb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()='Verify']</value>
+         <value>//button[text()='Skip']</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,7 +19,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//button[text()='Verify']</value>
-      <webElementGuid>c5aca315-ae23-4d1f-b301-ff923b9196b5</webElementGuid>
+      <value>//button[text()='Skip']</value>
+      <webElementGuid>ec9c5d68-23e9-4b85-82b5-cbb47fe2090c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

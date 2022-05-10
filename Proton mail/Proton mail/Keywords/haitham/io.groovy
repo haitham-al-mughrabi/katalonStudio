@@ -21,6 +21,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 import java.io.File
+import java.io.InputStream
+import java.io.OutputStream
+import java.io.Reader
+import java.io.Writer
+import groovy.json.JsonOutput;
+import groovy.json.JsonSlurper
 
 public class io {
 	@Keyword
@@ -36,13 +42,40 @@ public class io {
 		}
 		println (lines)
 	}
+
 	@Keyword
-	def writeOnFile(def filePath,def outputs,def writingStatus='append') {
-		if(writingStatus =='append') {
-			for(line in outputs) {
-				File output = new File(filePath)
-						output.withWriterAppend { out-> out.println(line) }		
-			}				
+	def readFromJsonFile(def filePath) {
+		try {
+			if(filePath) {
+				def jsonSlurper = new JsonSlurper()
+				return jsonSlurper.parse(new File(filePath))
 			}
+			else
+				throw new Exception('File path is not defined')
+		}
+		catch(Exception e) {
+			println e
+			return null
+		}
+	}
+
+	@Keyword
+	def writeOnFile(def filePath,def outputs,def writingStatus='append', def writingMethod='txt') {
+		try {
+			if (outputs==null)
+				throw new Exception('Output variable is empty')
+			if(writingMethod=='json')
+				outputs = JsonOutput.toJson(outputs)
+			def outputObject = new File(filePath)
+			if(writingStatus =='append' || writingStatus =='a') {
+				outputObject.withWriterAppend { it.println outputs }
+			}
+			else if(writingStatus == 'write' || writingStatus == 'w') {
+				outputObject.withWriter('utf-8') { it.println outputs }
+			}
+		}
+		catch(Exception e) {
+			println 'An error occured\n'+ e
+		}
 	}
 }

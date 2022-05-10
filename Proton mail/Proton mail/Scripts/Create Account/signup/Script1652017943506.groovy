@@ -38,27 +38,27 @@ try {
 	
 	CustomKeywords.'haitham.TabControl.switchTab'(protonmailPageIndex)
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/signupButton'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/signupButton'))
 	
-	WebUI.verifyElementText(findTestObject('Object Repository/protonmail/accountTypeSpan'), 'Select Your ProtonMail Account Type')
+	WebUI.verifyElementText(findTestObject('Object Repository/protonmail/Spans/accountTypeSpan'), 'Select Your ProtonMail Account Type')
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/freePlanDiv'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Wrappers/freePlanDiv'))
 	
-	WebUI.verifyElementNotHasAttribute(findTestObject('Object Repository/protonmail/freePlanWrapperDiv'), 'collapsed', 10)
+	WebUI.verifyElementNotHasAttribute(findTestObject('Object Repository/protonmail/Wrappers/freePlanWrapperDiv'), 'collapsed', 10)
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/selectFreePlanButton'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/selectFreePlanButton'))
 	
-	WebUI.verifyElementText(findTestObject('Object Repository/protonmail/signupPageTitle'),'Create your Proton Account')
+	WebUI.verifyElementText(findTestObject('Object Repository/protonmail/Spans/signupPageTitle'),'Create your Proton Account')
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/nextButtonSignupPage'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/nextButtonSignupPage'))
 	
-	WebUI.switchToFrame(findTestObject('Object Repository/protonmail/userNameIframeWrapper'), 15)
+	WebUI.switchToFrame(findTestObject('Object Repository/protonmail/Wrappers/userNameIframeWrapper'), 15)
 	
 	WebUI.verifyElementText(findTestObject('Object Repository/protonmail/VerifyText/usernameEmptyInputFieldErrorMessage'),'This field is required')
 	
 	def generatedUserName=CustomKeywords.'haitham.Generators.generateComplexRandomText'(15)
 	
-	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/userNameInputForm'), generatedUserName)
+	WebUI.setText(findTestObject('Object Repository/protonmail/Inputs/userNameInputForm'), generatedUserName)
 	
 	WebUI.switchToDefaultContent()
 	
@@ -66,27 +66,27 @@ try {
 	
 	def generatedPassword = CustomKeywords.'haitham.Generators.generateStrongPassword'()
 	
-	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/passwordInputForm'), generatedPassword)
+	WebUI.setText(findTestObject('Object Repository/protonmail/Inputs/passwordInputForm'), generatedPassword)
 	
 	WebUI.verifyElementText(findTestObject('Object Repository/protonmail/VerifyText/repeatPassswordMustContainErrorMessage'),'Password must contain at least 8 characters')
 	
-	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/repeatPasswordInputForm'), generatedPassword)
+	WebUI.setText(findTestObject('Object Repository/protonmail/Inputs/repeatPasswordInputForm'), generatedPassword)
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/nextButtonSignupPage'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/nextButtonSignupPage'))
 	
 	WebUI.delay(10)
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/skipRecoveryMethodButton'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/skipRecoveryMethodButton'))
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/confirmSkippingRecoveryMethodButton'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/confirmSkippingRecoveryMethodButton'))
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/selectFreePlanButtonOnPlanSelection'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/selectFreePlanButtonOnPlanSelection'))
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/emailTabVerificationPopup'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Wrappers/emailTabVerificationPopup'))
 	
-	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/emailVerficationInputForm'), tempEmail)
+	WebUI.setText(findTestObject('Object Repository/protonmail/Inputs/emailVerficationInputForm'), tempEmail)
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/getVerificationCodeButton'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/getVerificationCodeButton'))
 	
 	WebUI.delay(10)
 	
@@ -106,20 +106,24 @@ try {
 	
 	CustomKeywords.'haitham.TabControl.switchTab'(protonmailPageIndex)
 	
-	WebUI.setText(findTestObject('Object Repository/protonmail/Forms/verificationCodeInputForm'), verificationCode)
+	WebUI.setText(findTestObject('Object Repository/protonmail/Inputs/verificationCodeInputForm'), verificationCode)
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/verifyEmailButton'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/verifyEmailButton'))
 	
-	WebUI.click(findTestObject('Object Repository/protonmail/getStartedButton'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/getStartedButton'))
 	
 	for (i in 1..3)
-		WebUI.click(findTestObject('Object Repository/protonmail/getStartedNextButton'))
+		WebUI.click(findTestObject('Object Repository/protonmail/Buttons/getStartedNextButton'))
 	
 	WebUI.delay(5)
 	
 	def userinfo=['username':generatedUserName,'password':generatedPassword]
 	
-	CustomKeywords.'haitham.io.writeOnFile'()
+	def rootPath=CustomKeywords.'haitham.pathStuff.getPath'()
+	
+	def outputfilepath= CustomKeywords.'haitham.pathStuff.setPath'(rootPath.toString(),'InputFiles/users.txt')	
+	
+	CustomKeywords.'haitham.io.writeOnFile'(outputfilepath,userinfo,'w','json')
 	
 	WebUI.closeBrowser()
 	

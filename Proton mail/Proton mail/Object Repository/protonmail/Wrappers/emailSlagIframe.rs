@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>emailSlagIframe</name>
+   <tag></tag>
+   <elementGuidId>982dada7-cc51-4cc7-b2be-7adb3e82f3fc</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//iframe[@data-testid=&quot;rooster-iframe&quot;]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//iframe[@data-testid=&quot;rooster-iframe&quot;]</value>
+      <webElementGuid>e7e5c464-7d55-4c72-8447-458d4681da6d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

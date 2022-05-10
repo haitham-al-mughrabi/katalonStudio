@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>selectFreePlanButtonOnPlanSelection</name>
+   <description>Email message slag on new message</description>
+   <name>emailWrapper</name>
    <tag></tag>
-   <elementGuidId>5bc93806-be2c-4ffd-b5c2-2a81f7e1486f</elementGuidId>
+   <elementGuidId>ad7e1a9d-29c4-4c3b-9d64-5a4f1e9df84f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()='Select plan'][1]</value>
+         <value>//div[@id=&quot;rooster-editor&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -20,7 +20,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//button[text()='Select plan'][1]</value>
-      <webElementGuid>472f0c92-92f5-4667-9a45-1225553761bf</webElementGuid>
+      <value>//div[@id=&quot;rooster-editor&quot;]</value>
+      <webElementGuid>11f1f3bf-fc79-4536-98e2-61e2c68b00ef</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

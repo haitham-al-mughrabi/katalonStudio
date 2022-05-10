@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>skipRecoveryMethodButton</name>
+   <name>uploadFileField</name>
    <tag></tag>
-   <elementGuidId>7fcd9ac5-37df-4df7-976b-77cc17fba1eb</elementGuidId>
+   <elementGuidId>394d181a-73f3-4151-addb-faca40cbbf93</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()='Skip']</value>
+         <value>//input[contains(@id,&quot;editor-image-upload&quot;)]</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -20,7 +20,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//button[text()='Skip']</value>
-      <webElementGuid>ec9c5d68-23e9-4b85-82b5-cbb47fe2090c</webElementGuid>
+      <value>//input[contains(@id,&quot;editor-image-upload&quot;)]</value>
+      <webElementGuid>c8277ca7-3534-4874-8648-368d5af3710f</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>freePlanWrapperDiv</name>
+   <description>send to email input field on new message popup</description>
+   <name>sentToInputField</name>
    <tag></tag>
-   <elementGuidId>f625d427-640e-40c9-9c32-00631753dd3a</elementGuidId>
+   <elementGuidId>156551d4-a40c-4f54-a822-031b1bbcfec4</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='panel-group']/div[1]/div[1]</value>
+         <value>//input[@data-testid=&quot;composer:to&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -20,7 +20,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//div[@class='panel-group']/div[1]/div[1]</value>
-      <webElementGuid>8c316597-1fca-4c65-8b75-536e97ab3ad2</webElementGuid>
+      <value>//input[@data-testid=&quot;composer:to&quot;]</value>
+      <webElementGuid>1a43c95a-71c0-4220-9322-8d0c35285e22</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

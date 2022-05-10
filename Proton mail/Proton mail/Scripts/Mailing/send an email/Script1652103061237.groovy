@@ -18,13 +18,33 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 try {
-	WebUI.openBrowser('')
-//	WebUI.setText(null, null)
-	def outputs=[['a':5,'b':7],['c':'9']]
-	CustomKeywords.'haitham.io.writeOnFile'('/Users/haithamal/Documents/dev/file.txt',outputs)
+	WebUI.openBrowser(testURL)
+	def rootPath=CustomKeywords.'haitham.pathStuff.getPath'()
+	def outputfilepath= CustomKeywords.'haitham.pathStuff.setPath'(rootPath.toString(),'InputFiles/users.txt')
+	def userData= CustomKeywords.'haitham.io.readFromJsonFile'(outputfilepath)
+	WebUI.setText(findTestObject('Object Repository/protonmail/Inputs/emailOrUserInputForm'), userData.get('username'))
+	WebUI.setText(findTestObject('Object Repository/protonmail/Inputs/passwordInputForm'), userData.get('password'))
+	WebUI.check(findTestObject('Object Repository/protonmail/Inputs/keepMeSignedInCheckBoxInputField'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/signInButton'))
+	WebUI.waitForElementPresent(findTestObject('Object Repository/protonmail/Buttons/inboxButton'), 60)
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/newMessageButton'))
+	WebUI.waitForElementPresent(findTestObject('Object Repository/protonmail/Wrappers/newMessageWrapper'), 60)
+	WebUI.setText(findTestObject('Object Repository/protonmail/Inputs/sentToInputField'), defaultEmailAddress)
+	WebUI.setText(findTestObject('Object Repository/protonmail/Inputs/subjectInputField'), defaultEmailSubject)
+	WebUI.switchToFrame(findTestObject('Object Repository/protonmail/Wrappers/emailSlagIframe'), 30)
+	WebUI.sendKeys(findTestObject('Object Repository/protonmail/Wrappers/emailWrapper'), defaultEmailSlag)
+	WebUI.switchToDefaultContent()
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/insertFileButton'))
+	WebUI.delay(5)
+	WebUI.uploadFile(findTestObject('Object Repository/protonmail/Inputs/uploadFileField'), fileToUploadPath)
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/sendEmailButton'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/profileButton'))
+	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/signoutButton'))
+	WebUI.waitForElementPresent(findTestObject('Object Repository/protonmail/Buttons/signInButton'),60)
+	WebUI.verifyMatch(WebUI.getUrl(),testURL , false)
 	WebUI.closeBrowser()
 }
 catch(Exception e) {
-	println 'Error'
+	println 'An error occoured'
 	WebUI.closeBrowser()
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>emailTabVerificationPopup</name>
+   <name>profileButton</name>
    <tag></tag>
-   <elementGuidId>9a0ea6da-f62f-48f1-8dd1-b34c9606d68b</elementGuidId>
+   <elementGuidId>71a35b56-e818-48f5-8359-c1bc944d8cff</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//li[@class=&quot;tabs-list-item&quot;]/button[text()='Email']</value>
+         <value>//li[contains(@class,'topnav-listItem')][last()]/button</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -20,7 +20,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <type>Main</type>
-      <value>//li[@class=&quot;tabs-list-item&quot;]/button[text()='Email']</value>
-      <webElementGuid>a68b6887-faee-41ee-89d0-7bbdbadb7e9b</webElementGuid>
+      <value>//li[contains(@class,'topnav-listItem')][last()]/button</value>
+      <webElementGuid>90d25912-35b9-47a8-b31d-4e7a0de5d908</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
