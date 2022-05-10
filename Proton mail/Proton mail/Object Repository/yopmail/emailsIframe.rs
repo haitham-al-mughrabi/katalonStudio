@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>emailsIframe</name>
+   <tag></tag>
+   <elementGuidId>879232e1-400e-4a24-8a0b-5fef68153815</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//iframe[@id='ifinbox']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//iframe[@id='ifinbox']</value>
+      <webElementGuid>e84fabbd-ae09-49d1-a8d8-97dd09293506</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

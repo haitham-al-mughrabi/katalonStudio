@@ -1,0 +1,29 @@
+{
+  "keywordFileContentHash": "ED5B1D15A5D2154D5F4FDCC4164A5D44",
+  "keywordClasses": [
+    {
+      "name": "haitham.dealWithExcel",
+      "keywordMethods": [
+        {
+          "name": "readFromFile",
+          "parameters": [
+            {
+              "name": "filePath",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "javadocParsed": false
+}

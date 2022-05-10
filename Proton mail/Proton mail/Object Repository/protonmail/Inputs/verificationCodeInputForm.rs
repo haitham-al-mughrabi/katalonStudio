@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>verificationCodeInputForm</name>
+   <tag></tag>
+   <elementGuidId>5bd07930-b5d2-4478-b33d-1dcc4c4348cf</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id=&quot;verification&quot;]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//input[@id=&quot;verification&quot;]</value>
+      <webElementGuid>2c94fc47-ddb8-4903-a83c-1ab4b816a8da</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>uploadFileField</name>
+   <tag></tag>
+   <elementGuidId>394d181a-73f3-4151-addb-faca40cbbf93</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[contains(@id,&quot;editor-image-upload&quot;)]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//input[contains(@id,&quot;editor-image-upload&quot;)]</value>
+      <webElementGuid>c8277ca7-3534-4874-8648-368d5af3710f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

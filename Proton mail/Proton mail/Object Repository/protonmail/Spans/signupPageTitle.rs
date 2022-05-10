@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>signupPageTitle</name>
+   <tag></tag>
+   <elementGuidId>fb6c2fd0-d7f6-4899-be04-a04e25ce268a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//h1[contains(@class,'sign-layout-title')]/strong</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//h1[contains(@class,'sign-layout-title')]/strong</value>
+      <webElementGuid>e8469623-84b0-4ec4-8e0d-6a4cf538be70</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>repeatPasswordInputForm</name>
+   <tag></tag>
+   <elementGuidId>d9f72ffc-ccd8-49bf-b61b-81146f8bb5db</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id=&quot;repeat-password&quot;]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//input[@id=&quot;repeat-password&quot;]</value>
+      <webElementGuid>0f4774e5-5d76-48e0-a6f2-0e7fa457793d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

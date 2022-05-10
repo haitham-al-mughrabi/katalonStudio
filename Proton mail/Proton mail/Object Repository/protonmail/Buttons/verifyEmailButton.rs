@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>verifyEmailButton</name>
+   <tag></tag>
+   <elementGuidId>7ac387f6-377d-4611-941f-b097f5202049</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[text()='Verify']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//button[text()='Verify']</value>
+      <webElementGuid>c5aca315-ae23-4d1f-b301-ff923b9196b5</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

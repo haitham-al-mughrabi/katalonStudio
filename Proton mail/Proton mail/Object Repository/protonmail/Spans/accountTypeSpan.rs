@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>accountTypeSpan</name>
+   <tag></tag>
+   <elementGuidId>634d18f0-1301-4bf3-929d-8db147cb3514</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[contains(@class,'text-center')]/h1</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//div[contains(@class,'text-center')]/h1</value>
+      <webElementGuid>91b388ee-8cbe-4de6-b36b-70ea0d28fd5b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
