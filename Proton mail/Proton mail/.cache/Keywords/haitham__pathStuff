@@ -1,12 +1,13 @@
 {
-  "keywordFileContentHash": "A34D9880758EFED8CC9C3901CECB419A",
+  "keywordFileContentHash": "5E114A704DB7F267E4393AE31528BE41",
   "keywordClasses": [
     {
       "name": "haitham.pathStuff",
       "keywordMethods": [
         {
           "name": "getPath",
-          "parameters": []
+          "parameters": [],
+          "javadoc": ""
         },
         {
           "name": "setPath",
@@ -37,10 +38,11 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
         }
       ]
     }
   ],
-  "javadocParsed": false
+  "javadocParsed": true
 }
