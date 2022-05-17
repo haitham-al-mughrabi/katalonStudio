@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>Proton mail</name>
+   <name>mobile testing</name>
    <tag></tag>
-   <UUID>1545efbf-1120-4c49-a1be-559d0df8ab65</UUID>
+   <UUID>a7722a05-b952-4f4a-a63e-749258dc75a0</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>/Users/haithamal/git/katalonStudio/Proton mail/Proton mail/Proton mail.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
@@ -26,5 +25,5 @@
       </systemFolderList>
    </sourceContent>
    <timeStampInProperties>false</timeStampInProperties>
-   <type>WEBUI</type>
+   <type>MOBILE</type>
 </Project>

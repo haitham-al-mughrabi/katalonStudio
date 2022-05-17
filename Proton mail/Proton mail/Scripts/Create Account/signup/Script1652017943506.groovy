@@ -40,6 +40,8 @@ try {
 	
 	WebUI.click(findTestObject('Object Repository/protonmail/Buttons/signupButton'))
 	
+	WebUI.waitForElementPresent(findTestObject('Object Repository/protonmail/Spans/accountTypeSpan'), 60)
+	
 	WebUI.verifyElementText(findTestObject('Object Repository/protonmail/Spans/accountTypeSpan'), 'Select Your ProtonMail Account Type')
 	
 	WebUI.click(findTestObject('Object Repository/protonmail/Wrappers/freePlanDiv'))

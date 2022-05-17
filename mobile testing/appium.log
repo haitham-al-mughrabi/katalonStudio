@@ -1,0 +1,124 @@
+[35m[Appium][39m Welcome to Appium v1.22.3
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   port: 60422
+[35m[Appium][39m   loglevel: info
+[35m[Appium][39m   tmpDir: /var/folders/bp/q_wpsryx1jb8dcz0gtr7zbzm0000gp/T//Katalon/Appium/Temp1652370237184
+[35m[Appium][39m   chromedriverPort: 60423
+[35m[Appium][39m Deprecated server args:
+[35m[Appium][39m   [31m--chromedriver-port[39m => --default-capabilities
+[35m[Appium][39m Default capabilities, which will be added to each request unless overridden by desired capabilities:
+[35m[Appium][39m   chromedriverPort: 60423
+[35m[Appium][39m Appium REST http interface listener started on 0.0.0.0:60422
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m3 ms - 68[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m
+[35m[HTTP][39m [90m{}[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m1 ms - 68[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m
+[35m[HTTP][39m [90m{"desiredCapabilities":{"app":"/Users/haithamal/Library/Developer/Xcode/DerivedData/Coffee_Timer-czsprdhomlfdgyejthomzgxslapx/Build/Products/Debug-iphonesimulator/Coffee Timer.app","noReset":true,"deviceName":"iPhone 5s","fullReset":false,"wdaLocalPort":60431,"newCommandTimeout":1800,"realDeviceLogger":"/Applications/Katalon Studio.app/Contents/Eclipse/configuration/resources/tools/deviceconsole","platformVersion":"12.4","automationName":"XCUITest","waitForAppScript":"true;","platformName":"iOS","udid":"79FA14D8-D66D-400F-A3EC-254DEA8EC050"},"capabilities":{"firstMatch":[{"appium:app":"/Users/haithamal/Library/Developer/Xcode/DerivedData/Coffee_Timer-czsprdhomlfdgyejthomzgxslapx/Build/Products/Debug-iphonesimulator/Coffee Timer.app","appium:automationName":"XCUITest","appium:deviceName":"iPhone 5s","appium:fullReset":false,"appium:newCommandTimeout":1800,"appium:noReset":true,"platformName":"ios","appium:platformVersion":"12.4","realDeviceLogger":"/Applications/Katalon Studio.app/Contents/Eclipse/configura...[39m
+[35m[BaseDriver][39m The following capabilities are not standard capabilities and should have an extension prefix:
+[35m[BaseDriver][39m   realDeviceLogger
+[35m[BaseDriver][39m   chromedriverPort
+[35m[Appium][39m Appium v1.22.3 creating new XCUITestDriver (v3.59.0) session
+[35m[BaseDriver][39m The following capabilities were provided, but are not recognized by Appium:
+[35m[BaseDriver][39m   realDeviceLogger
+[35m[BaseDriver][39m   chromedriverPort
+[35m[BaseDriver][39m   waitForAppScript
+[35m[BaseDriver][39m Session created with session id: 81c472c4-4d7c-40db-8a3f-5c0cf0679610
+[35m[iOSSim][39m Constructing iOS simulator for Xcode version 13.3.1 with udid '79FA14D8-D66D-400F-A3EC-254DEA8EC050'
+[35m[XCUITest][39m Determining device to run tests on: udid: '79FA14D8-D66D-400F-A3EC-254DEA8EC050', real device: false
+[35m[BaseDriver][39m Using local app '/Users/haithamal/Library/Developer/Xcode/DerivedData/Coffee_Timer-czsprdhomlfdgyejthomzgxslapx/Build/Products/Debug-iphonesimulator/Coffee Timer.app'
+[35m[WebDriverAgent][39m Using WDA path: '/usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent'
+[35m[WebDriverAgent][39m Using WDA agent: '/usr/local/lib/node_modules/appium/node_modules/appium-webdriverage[35m[Appium][39m Received SIGTERM - shutting down
+ntinuing without capturing device logs: iOS Simulator with udid '79FA14D8-D66D-400F-A3EC-254DEA8EC050' is not running
+[35m[XCUITest][39m Setting up simulator
+[35m[iOSSim][39m Starting Simulator UI with command: open -Fn /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app --args -CurrentDeviceUDID 79FA14D8-D66D-400F-A3EC-254DEA8EC050
+[35m[iOSSim][39m Simulator with UDID 79FA14D8-D66D-400F-A3EC-254DEA8EC050 booted in 18.878s
+[35m[DevCon Factory][39m Requesting connection for device 79FA14D8-D66D-400F-A3EC-254DEA8EC050 on local port 60431
+[35m[DevCon Factory][39m Successfully requested the connection for 79FA14D8-D66D-400F-A3EC-254DEA8EC050:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:604[35m[Appium][39m Received SIGTERM - shutting down
+nt on the device
+[35m[WebDriverAgent][39m WebDriverAgent sources have been upgraded (1652347862050 < 1652356751286)
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[[35m[Appium][39m Received SIGTERM - shutting down
+wn
+5m[WD Proxy][39m connect ECONNR[35m[Appium][39m Received SIGTERM - shutting down
+ECONNREFUSED 127.0.0.1:60431
+[35m[WD P[35m[Appium][39m Received SIGTERM - shutting down
+own
+ Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[[35m[Appium][39m Received SIGTERM - shutting down
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m[35m[Appium][39m Received SIGTERM - shutting down
+][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD [35m[Appium][39m Received SIGTERM - shutting down
+5m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[W[35m[Appium][39m Received SIGTERM - shutting down
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m socket hang up
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[32m-[39m [90m- ms - -[39m
+[35m[HTTP][39m [90m[39m
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[WD Proxy][39m connect ECONNREFUSED 127.0.0.1:60431
+[35m[XCUITest][39m Quitting and uninstalling WebDriverAgent
+[35m[WebDriverAgent][39m Shutting down sub-processes
+[35m[WebDriverAgent][39m Shutting down 'xcodebuild' process (pid '75698')
+[35m[WebDriverAgent][39m Sending 'SIGTERM'...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     [35m[Appium][39m Received SIGTERM - shutting down
