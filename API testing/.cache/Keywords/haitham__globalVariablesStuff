@@ -1,0 +1,42 @@
+{
+  "keywordFileContentHash": "4211B61A6E36FE82AD8CCED53BFD2B16",
+  "keywordClasses": [
+    {
+      "name": "haitham.globalVariablesStuff",
+      "keywordMethods": [
+        {
+          "name": "addGlobalVariable",
+          "parameters": [
+            {
+              "name": "globalVariableName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "globalVariableValue",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "javadocParsed": false
+}

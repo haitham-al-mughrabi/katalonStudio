@@ -1,0 +1,45 @@
+{
+  "keywordFileContentHash": "B6F33A3F05D6CF66540763E1002FD0C5",
+  "keywordClasses": [
+    {
+      "name": "haitham.TabControl",
+      "keywordMethods": [
+        {
+          "name": "openTab",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "getCurrentTabIndex",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "switchTab",
+          "parameters": [
+            {
+              "name": "tabIndex",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "switchTab",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}
