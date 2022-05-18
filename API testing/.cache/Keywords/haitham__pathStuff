@@ -1,27 +1,32 @@
 {
-  "keywordFileContentHash": "4211B61A6E36FE82AD8CCED53BFD2B16",
+  "keywordFileContentHash": "5E114A704DB7F267E4393AE31528BE41",
   "keywordClasses": [
     {
-      "name": "haitham.globalVariablesStuff",
+      "name": "haitham.pathStuff",
       "keywordMethods": [
         {
-          "name": "addGlobalVariable",
+          "name": "getPath",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "setPath",
           "parameters": [
             {
-              "name": "globalVariableName",
+              "name": "rootPath",
               "initialExpression": "",
               "type": {
-                "fullClassName": "java.lang.String",
-                "unresolvedClassName": "String",
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
                 "isArray": false,
                 "isGnericsPlaceHolder": false,
-                "hasImmutableClassName": false,
+                "hasImmutableClassName": true,
                 "genericsTypes": [],
                 "errorOnParsing": false
               }
             },
             {
-              "name": "globalVariableValue",
+              "name": "filePath",
               "initialExpression": "",
               "type": {
                 "fullClassName": "java.lang.Object",

@@ -4,44 +4,18 @@
    <name>Get Teacher Courses</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>22af1e7b-25bf-4524-a40a-f7d1e275947f</testCaseGuid>
+   <testCaseGuid>553aa8d2-be77-44ae-9e6f-5634baebf237</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>fe7ccbd9-52e2-421c-ac77-0824e4c320cc</variableId>
-   </variableLinks>
-   <variableLinks>
-      <testDataLinkId></testDataLinkId>
-      <type>DEFAULT</type>
-      <value></value>
-      <variableId>af8a30ed-7673-48e6-a793-c8258dcbefbf</variableId>
-   </variableLinks>
-   <variableLinks>
-      <testDataLinkId></testDataLinkId>
-      <type>DEFAULT</type>
-      <value></value>
-      <variableId>2404370d-6c6e-4eb1-8bdb-74422cb16566</variableId>
+      <variableId>15c297c7-1f62-437a-a746-4964d4a07b91</variableId>
    </variableLinks>
    <variable>
-      <defaultValue>GlobalVariable.teacherAccessToken</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
-      <id>fe7ccbd9-52e2-421c-ac77-0824e4c320cc</id>
-      <masked>true</masked>
-      <name>teacherAccessToken</name>
-   </variable>
-   <variable>
-      <defaultValue>GlobalVariable.teacherEmail</defaultValue>
-      <description></description>
-      <id>af8a30ed-7673-48e6-a793-c8258dcbefbf</id>
+      <id>15c297c7-1f62-437a-a746-4964d4a07b91</id>
       <masked>false</masked>
-      <name>teacherEmail</name>
-   </variable>
-   <variable>
-      <defaultValue>GlobalVariable.teacherPassword</defaultValue>
-      <description></description>
-      <id>2404370d-6c6e-4eb1-8bdb-74422cb16566</id>
-      <masked>false</masked>
-      <name>teacherPassword</name>
+      <name>teacherCourses</name>
    </variable>
 </TestCaseEntity>

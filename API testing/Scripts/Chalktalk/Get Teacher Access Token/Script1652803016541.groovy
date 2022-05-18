@@ -17,5 +17,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-def response = WS.sendRequest(findTestObject('Object Repository/Calculator Soap Service/Addition'))
-println WS.getElementText(response, 'AddResponse.AddResult')
+
+def response = WS.sendRequest( findTestObject('Object Repository/Chalktalk/Gain access token') )
+println CustomKeywords.'haitham.handyMethods.filter'([1,5,6],'>=1')
+if(response.statusCode==200) {
+	def mapObject= CustomKeywords.'haitham.jsonStuff.parseJsonToMap'(response.responseBodyContent)
+	CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('teacherAccessToken',mapObject['tokens']['access'])
+	CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('teacherID',mapObject['user']['id'])	
+	teacherAccessToken=GlobalVariable.teacherAccessToken	
+	teacherID=GlobalVariable.teacherID
+}

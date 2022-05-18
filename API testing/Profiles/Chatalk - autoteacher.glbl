@@ -16,12 +16,22 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUyODY2NjE1LCJqdGkiOiI1ODBkZjZhYWZjODY0MTY0ODg5ZjJiYTNlMjUwOTMwOSIsInVzZXJfaWQiOjY5MDQxfQ.zFr8RHFSFfaHc82EQYpP8o4AXTmnvWG12hY0lWKlirc'</initValue>
       <name>teacherAccessToken</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'https://api.chalktalk.academy/api/'</initValue>
       <name>apiIdentifier</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>69041</initValue>
+      <name>teacherID</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>teacherCourses</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
