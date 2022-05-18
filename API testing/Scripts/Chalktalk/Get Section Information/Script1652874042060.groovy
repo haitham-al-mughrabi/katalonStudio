@@ -29,7 +29,14 @@ try {
 			def response = WS.sendRequest(findTestObject('Object Repository/Chalktalk/Gain section information'))
 			if(response.statusCode==200) {
 				def mapObject= CustomKeywords.'haitham.jsonStuff.parseJsonToMap'(response.responseBodyContent)
-				println mapObject
+				def rootPath=CustomKeywords.'haitham.pathStuff.getPath'()
+				def sectionInformationFilePath=CustomKeywords.'haitham.pathStuff.setPath'(rootPath,'/Fixtures/sectionInformation.json' )
+				def sectionInformationFileData=CustomKeywords.'haitham.io.readFromJsonFile'(sectionInformationFilePath)
+				assert (sectionInformationFileData['startDate'] == mapObject['start_date'])
+				assert (sectionInformationFileData['endDate'] == mapObject['end_date'])
+				assert (sectionInformationFileData['sectionName'] == mapObject['name'])
+				assert (sectionInformationFileData['holidays'] == mapObject['holidays'])
+				assert (sectionInformationFileData['sectionID'] == mapObject['id'])
 			}
 			else {
 				throw new Exception("""Status code is not 200. status code: ${response.statusCode}""")

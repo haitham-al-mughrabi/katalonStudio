@@ -32,7 +32,7 @@ public class pathStuff {
 		@SourceURI
 				URI sourceUri
 		Path scriptLocation = Paths.get(sourceUri).getParent().getParent().getParent()
-		return scriptLocation
+		return scriptLocation.toString()
 	}
 	@Keyword
 	def setPath(def rootPath, def filePath) {
