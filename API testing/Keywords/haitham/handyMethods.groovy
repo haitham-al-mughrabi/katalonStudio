@@ -32,37 +32,39 @@ public class handyMethods {
 	 * @param condition string
 	 * @return object
 	 */
-//	@Keyword
-//	def filter(def array=null, def pattern=null, def condition=null, def findall = false) {
-//	  if (array == null || array.size == 0 || pattern == null || condition == null)
-//	    return null
-//	  GroovyShell intilizedShell = new GroovyShell()
-//	  if (findall)
-//	    return array.findAll {
-//	      if (it.getClass().toString().contains('String'))
-//	        it = """'${it}'"""
-//	      if (pattern.getClass().toString().contains('String'))
-//	        pattern = """'${pattern}'""".replace('\'\'', '\'')
-//	      intilizedShell.evaluate("""${it} ${condition} ${pattern}""")
-//	    }
-//	  else if (findall == false)
-//	    return array.find {
-//	      if (it.getClass().toString().contains('String'))
-//	        it = """'${it}'"""
-//	      if (pattern.getClass().toString().contains('String'))
-//	        pattern = """'${pattern}'""".replace('\'\'', '\'')
-//	      intilizedShell.evaluate("""${it} ${condition} ${pattern}""")
-//	    }
-//	}
+	//	@Keyword
+	//	def filter(def array=null, def pattern=null, def condition=null, def findall = false) {
+	//	  if (array == null || array.size == 0 || pattern == null || condition == null)
+	//	    return null
+	//	  GroovyShell intilizedShell = new GroovyShell()
+	//	  if (findall)
+	//	    return array.findAll {
+	//	      if (it.getClass().toString().contains('String'))
+	//	        it = """'${it}'"""
+	//	      if (pattern.getClass().toString().contains('String'))
+	//	        pattern = """'${pattern}'""".replace('\'\'', '\'')
+	//	      intilizedShell.evaluate("""${it} ${condition} ${pattern}""")
+	//	    }
+	//	  else if (findall == false)
+	//	    return array.find {
+	//	      if (it.getClass().toString().contains('String'))
+	//	        it = """'${it}'"""
+	//	      if (pattern.getClass().toString().contains('String'))
+	//	        pattern = """'${pattern}'""".replace('\'\'', '\'')
+	//	      intilizedShell.evaluate("""${it} ${condition} ${pattern}""")
+	//	    }
+	//	}
 	@Keyword
 	def filter(def array=null, def condition=null, def findall=false) {
 		if(array==null ||array.size==0||condition==null)
 			return null
 		if(findall)
-			return array.findAll {GroovyShell intilizedShell = new GroovyShell()
+			return array.findAll {
+				GroovyShell intilizedShell = new GroovyShell()
 				intilizedShell.evaluate("""${it} ${condition} """)}
 		else if(findall==false)
-			return array.find {GroovyShell intilizedShell = new GroovyShell()
-			intilizedShell.evaluate("""${it} ${condition} """)}
-	  }
+			return array.find {
+				GroovyShell intilizedShell = new GroovyShell()
+				intilizedShell.evaluate("""${it} ${condition} """)}
+	}
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Gain user courses</name>
+   <name>Gain course sections</name>
    <tag></tag>
-   <elementGuidId>b081be58-3e39-47f8-8fe2-027b33f90cce</elementGuidId>
+   <elementGuidId>0fef7ccf-7e5d-4c17-8d5d-59d640fc712e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -17,13 +17,13 @@
       <name>Authorization</name>
       <type>Main</type>
       <value>Bearer ${teacherAccessToken}</value>
-      <webElementGuid>696d88bd-e43a-4e18-9ed8-6ecf5e74e65c</webElementGuid>
+      <webElementGuid>0ce3a6a9-2b8a-457f-bfa0-376d05df143d</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.3.0</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${apiIdentifier}users/${teacherID}/courses/</restUrl>
+   <restUrl>${apiIdentifier}courses/${courseID}/sections/</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -33,25 +33,25 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>GlobalVariable.apiIdentifier</defaultValue>
-      <description></description>
-      <id>cdbe574f-3e43-4a76-86ed-3b9c59f5b415</id>
-      <masked>false</masked>
-      <name>apiIdentifier</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.teacherID</defaultValue>
-      <description></description>
-      <id>b8f5022b-6915-42e4-9899-275d14a3c670</id>
-      <masked>false</masked>
-      <name>teacherID</name>
-   </variables>
-   <variables>
       <defaultValue>GlobalVariable.teacherAccessToken</defaultValue>
       <description></description>
-      <id>a668cde5-df02-49c3-990c-d6f908168e55</id>
+      <id>b1c09582-af2d-4947-9f4c-c3bd2a754e5a</id>
       <masked>false</masked>
       <name>teacherAccessToken</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.courseID</defaultValue>
+      <description></description>
+      <id>b0cf78ff-8318-496c-9ca8-ccd0e5d5f7c2</id>
+      <masked>false</masked>
+      <name>courseID</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.apiIdentifier</defaultValue>
+      <description></description>
+      <id>0a15ba0e-c9e7-47f5-99ed-f026082a7fad</id>
+      <masked>false</masked>
+      <name>apiIdentifier</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

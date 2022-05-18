@@ -16,15 +16,27 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.configuration.RunConfiguration
 
 try {
 	if(RunConfiguration.getExecutionProfile()!='default') {
-		def response = WS.sendRequest( findTestObject('Object Repository/Chalktalk/Gain user courses') )
-		if(response.statusCode==200) {
-			def mapObject= CustomKeywords.'haitham.jsonStuff.parseJsonToMap'(response.responseBodyContent)
-			CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('teacherCourses',mapObject)
+		def section = GlobalVariable.courseSections.find{
+			it['name']==GlobalVariable.sectionName
+		}
+		GlobalVariable.sectionID = section['id']
+		if(GlobalVariable.sectionID!=null) {
+			def response = WS.sendRequest(findTestObject('Object Repository/Chalktalk/Gain section information'))
+			if(response.statusCode==200) {
+				def mapObject= CustomKeywords.'haitham.jsonStuff.parseJsonToMap'(response.responseBodyContent)
+				println mapObject
+			}
+			else {
+				throw new Exception("""Status code is not 200. status code: ${response.statusCode}""")
+			}
+		}
+		else {
+			throw new Exception('Provided course name does not match any course.')
 		}
 	}
 	else {
@@ -32,5 +44,5 @@ try {
 	}
 }
 catch(Exception e) {
-	KeywordUtil.markError("""An exception has been raised. Error message: ${e.getMessage()}""")
+		KeywordUtil.markError("""An exception has been raised. Error message: ${e.getMessage()}""")
 }

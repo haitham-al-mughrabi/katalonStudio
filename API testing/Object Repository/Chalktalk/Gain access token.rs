@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;email\&quot;:\&quot;autoteacher@gmail.com\&quot;,\n  \&quot;password\&quot;:\&quot;12345678\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;email\&quot;:\&quot;${teacherEmail}\&quot;,\n  \&quot;password\&quot;:\&quot;${teacherPassword}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -42,6 +42,20 @@
       <id>4d938bd7-b8d1-4ab2-b50d-93e84877cff7</id>
       <masked>false</masked>
       <name>apiIdentifier</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.teacherEmail</defaultValue>
+      <description></description>
+      <id>1b3c0a7a-bdb7-459d-8790-a16cb1ffc5a3</id>
+      <masked>false</masked>
+      <name>teacherEmail</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.teacherPassword</defaultValue>
+      <description></description>
+      <id>358f7885-f1ab-4fdf-90d9-e18aedccbc33</id>
+      <masked>false</masked>
+      <name>teacherPassword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
