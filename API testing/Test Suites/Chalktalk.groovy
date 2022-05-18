@@ -24,6 +24,9 @@ import com.kms.katalon.core.annotation.SetupTestCase
 import com.kms.katalon.core.annotation.TearDown
 import com.kms.katalon.core.annotation.TearDownTestCase
 
+import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.configuration.RunConfiguration
+
 /**
  * Some methods below are samples for using SetUp/TearDown in a test suite.
  */
@@ -31,31 +34,63 @@ import com.kms.katalon.core.annotation.TearDownTestCase
 /**
  * Setup test suite environment.
  */
-@SetUp(skipped = true) // Please change skipped to be false to activate this method.
+@SetUp(skipped = false) // Please change skipped to be false to activate this method.
 def setUp() {
-	// Put your code here.
+	try {
+		if(RunConfiguration.getExecutionProfile()!='default') {
+	
+	def response = WS.sendRequest( findTestObject('Object Repository/Chalktalk/Gain access token') )
+	if(response.statusCode==200) {
+		def mapObject= CustomKeywords.'haitham.jsonStuff.parseJsonToMap'(response.responseBodyContent)
+		CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('teacherAccessToken',mapObject['tokens']['access'])
+		CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('teacherID',mapObject['user']['id'])
+	}
+		}
+		else {
+			throw new Exception('Profile is not selected')
+		}
+	}
+	catch(Exception e) {
+		KeywordUtil.markError("""An exception has been raised. Error message: ${e.getMessage()}""")
+	}
 }
 
 /**
  * Clean test suites environment.
  */
-@TearDown(skipped = true) // Please change skipped to be false to activate this method.
+@TearDown(skipped = false) // Please change skipped to be false to activate this method.
 def tearDown() {
-	// Put your code here.
+	KeywordUtil.logInfo('Teardown has been occured')
 }
 
 /**
  * Run before each test case starts.
  */
-@SetupTestCase(skipped = true) // Please change skipped to be false to activate this method.
+@SetupTestCase(skipped = false) // Please change skipped to be false to activate this method.
 def setupTestCase() {
-	// Put your code here.
+	try {
+		if(GlobalVariable.teacherAccessToken==null) {
+	
+	def response = WS.sendRequest( findTestObject('Object Repository/Chalktalk/Gain access token') )
+	if(response.statusCode==200) {
+		def mapObject= CustomKeywords.'haitham.jsonStuff.parseJsonToMap'(response.responseBodyContent)
+		CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('teacherAccessToken',mapObject['tokens']['access'])
+		CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('teacherID',mapObject['user']['id'])
+	}
+		}
+		else {
+			KeywordUtil.logInfo('Teacher AccessToken is defined, skipping')
+		}
+	}
+	catch(Exception e) {
+		KeywordUtil.markError("""An exception has been raised. Error message: ${e.getMessage()}""")
+	}
 }
 
 /**
  * Run after each test case ends.
  */
-@TearDownTestCase(skipped = true) // Please change skipped to be false to activate this method.
+@TearDownTestCase(skipped = false) // Please change skipped to be false to activate this method.
 def tearDownTestCase() {
 	// Put your code here.
 }
