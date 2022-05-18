@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_TA</name>
+   <tag></tag>
+   <elementGuidId>5aa4147d-78f2-415c-969e-d9fb148d6c4d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='app']/section/div/div[3]/div/ul/li[6]/div/p</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>p</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>f4a1052e-9a3c-47b1-85d1-a2d9bdca3c67</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>TA</value>
+      <webElementGuid>66270bfe-518c-40d1-876f-82a77292c64f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app&quot;)/section[@class=&quot;MainLayoutstyle__PrimaryLayout-sc-4v0j7z-0 kDiaKk&quot;]/div[@class=&quot;TopNavBarstyle__TopNavBarVertical-sc-494zmv-0 cQPuFJ&quot;]/div[@class=&quot;TopNavBarstyle__NavBarGroup-sc-494zmv-2 guKSiF&quot;]/div[@class=&quot;TopNavBarstyle__InfoUserGroup-sc-494zmv-7 bgqsZt&quot;]/ul[@class=&quot;TopNavBarstyle__NavBarPrimary-sc-494zmv-3 dyVWaH&quot;]/li[@class=&quot;TopNavBarstyle__NavBarItem-sc-494zmv-4 LLRLr&quot;]/div[@class=&quot;TopNavBarstyle__UserIconInitials-sc-494zmv-6 kmDXhf&quot;]/p[1]</value>
+      <webElementGuid>a83767ca-db9e-4af3-8650-1b4f77ad6f99</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='app']/section/div/div[3]/div/ul/li[6]/div/p</value>
+      <webElementGuid>0599e69c-70f0-4505-9736-e7dfaae44f38</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Calendar'])[1]/following::p[1]</value>
+      <webElementGuid>382ced4a-cb21-4b6b-a7b8-1eddb16382f0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Exams'])[1]/following::p[1]</value>
+      <webElementGuid>2d67c52a-5304-420c-aaae-bc97b1300d13</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Lessons'])[2]/preceding::p[1]</value>
+      <webElementGuid>c97e11b9-9f46-45ec-85ec-5e3f892e143d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Subjects'])[1]/preceding::p[1]</value>
+      <webElementGuid>35553eca-bb05-46a7-adc9-639957aa2851</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='TA']/parent::*</value>
+      <webElementGuid>ead8c715-3c4f-40ca-b4b5-03440569f612</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//p</value>
+      <webElementGuid>6710e450-9da6-432b-9bd5-1dbab8926340</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[(text() = 'TA' or . = 'TA')]</value>
+      <webElementGuid>3b17fe9c-845c-41d9-9f75-83d3c685ddf7</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
