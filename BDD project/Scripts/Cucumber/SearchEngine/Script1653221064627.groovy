@@ -17,20 +17,5 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
-
-WebUI.navigateToUrl('https://app.chalktalk.com/login')
-
-WebUI.setText(findTestObject('Object Repository/Page_ChalkTalk/input_Email or Username_email'), 'autoteacher@gmail.com')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_ChalkTalk/input_Password_password'), 'RigbBhfdqOBGNlJIWM1ClA==')
-
-WebUI.click(findTestObject('Object Repository/Page_ChalkTalk/button_Log In'))
-
-WebUI.click(findTestObject('Object Repository/Page_ChalkTalk/div_IntroductionChalkTalk OverviewSun Dec 1_7aa45a'))
-
-WebUI.click(findTestObject('Object Repository/Page_ChalkTalk/p_TA'))
-
-WebUI.click(findTestObject('Object Repository/Page_ChalkTalk/div_Logout'))
-
+CucumberKW.runFeatureFile('')
 

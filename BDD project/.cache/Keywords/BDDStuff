@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "74F270E46EA7809CFC4AE1791D2B1BBC",
+  "keywordClasses": [
+    {
+      "name": "BDDStuff",
+      "keywordMethods": [
+        {
+          "name": "castDataTableIntoMap",
+          "parameters": [
+            {
+              "name": "dataTable",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "io.cucumber.datatable.DataTable",
+                "unresolvedClassName": "DataTable",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

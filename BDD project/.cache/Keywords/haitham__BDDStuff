@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "89EDA36BB640CE726DB37F858C0C0B93",
+  "keywordClasses": [
+    {
+      "name": "haitham.BDDStuff",
+      "keywordMethods": [
+        {
+          "name": "castDataTableIntoMap",
+          "parameters": [
+            {
+              "name": "dataTable",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "io.cucumber.datatable.DataTable",
+                "unresolvedClassName": "DataTable",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

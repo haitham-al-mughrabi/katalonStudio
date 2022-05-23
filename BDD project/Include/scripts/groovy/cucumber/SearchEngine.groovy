@@ -1,4 +1,4 @@
-package bdd
+package cucumber
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -19,7 +19,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
-
+import io.cucumber.datatable.DataTable
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By
@@ -41,24 +41,30 @@ import cucumber.api.java.en.And
 import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUIdef
+import haitham.BDDStuff
+import java.time.*
 
-
-
-class LoginSteps {
-	@Given("User navigate to login page")
-	def naviagreToLoginPage() {
-		println 'given'
+class SearchEngine {
+	def userDataList, userAge
+	@Given("user data table")
+	def readDataTable(DataTable dataTable) {
+		def classWrapper =new BDDStuff()
+		userDataList =classWrapper.castDataTableIntoMap(dataTable)
+		println userDataList
 	}
-	@When("User enters (.*) and (.*)")
-	def enterCridentails(def username, def password) {
-		printf('entering %s %s\n',username, password)
+	@When("user calcualte his age")
+	def calcualteAge() {
+		def userDate = userDataList['birthdate'].toString().split('/')
+		LocalDate today    = LocalDate.now()
+		LocalDate birthday =LocalDate.of(userDate[2] as Integer,userDate[1] as Integer, userDate[0] as Integer)
+		Period period = Period.between( birthday, today )
+		userAge=period.years.toInteger()
 	}
-	@And("Click on login button")
-	def performLogin() {
-		println 'logging in'
-	}
-	@Then("User is navigated to homepage")
-	def checkPage() {
-		println 'you are on homepage'
+	@Then("his age should equial (.*)")
+	def assertAge(def age) {
+		println ("""$userAge,${userAge.getClass()}""")
+		println ("""$age,${age.getClass()}""")
+		assert(age.toInteger()==userAge)
 	}
 }
