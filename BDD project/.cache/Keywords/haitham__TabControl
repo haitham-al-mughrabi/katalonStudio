@@ -1,14 +1,24 @@
 {
-  "keywordFileContentHash": "C154174B2AAB5FB6D7EA3BC55F2C94D4",
+  "keywordFileContentHash": "B6F33A3F05D6CF66540763E1002FD0C5",
   "keywordClasses": [
     {
-      "name": "haitham.BDDStuff",
+      "name": "haitham.TabControl",
       "keywordMethods": [
         {
-          "name": "castDataTableIntoMap",
+          "name": "openTab",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "getCurrentTabIndex",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "switchTab",
           "parameters": [
             {
-              "name": "dataTable",
+              "name": "tabIndex",
               "initialExpression": "",
               "type": {
                 "fullClassName": "java.lang.Object",
@@ -21,6 +31,11 @@
               }
             }
           ],
+          "javadoc": ""
+        },
+        {
+          "name": "switchTab",
+          "parameters": [],
           "javadoc": ""
         }
       ]

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>addToCart</name>
+   <tag>Amazon</tag>
+   <comment></comment>
+   <testCaseGuid>efe512fc-8e48-4791-9e0c-0197d0e7c8bf</testCaseGuid>
+</TestCaseEntity>
