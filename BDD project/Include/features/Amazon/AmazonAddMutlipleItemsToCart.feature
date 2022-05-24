@@ -19,6 +19,7 @@ Feature: Add multiple items to the cart.
     Then Item should be added to the cart
     And Item count of the cart should be increased by 1
     When Back to home screen
+    When I close the browser
 
     Examples: 
       | Categorie          | Item      | PriceRange   | SelectedItemToBuy                                                 | Price   |

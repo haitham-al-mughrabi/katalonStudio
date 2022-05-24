@@ -51,7 +51,7 @@ class Cart {
 	@When("user open browser")
 	def launchBrowser() {
 		if(RunConfiguration.getExecutionProfile()=='default') {
-			WebUI.openBrowser('')			
+			WebUI.openBrowser('')
 		}
 		else {
 			WebUI.openBrowser(GlobalVariable.website)

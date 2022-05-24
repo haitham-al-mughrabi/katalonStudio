@@ -41,29 +41,50 @@ import cucumber.api.java.en.And
 import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
+import com.kms.katalon.core.configuration.RunConfiguration
 
-
+import haitham.TestObjectStuff
 
 class AddMutlipleItemsToCart {
+	
 	/*
 	 * Background
 	 */
 	@Given('open browser')
 	def launchBrowser() {
-		WebUI.openBrowser('')
+		if(RunConfiguration.getExecutionProfile()=='default')
+			WebUI.openBrowser('')
+		else 
+			WebUI.openBrowser(GlobalVariable.website)
 	}
 	@And('navigate to (.*)')
 	def naviagteToWebsite(String URL) {
-		WebUI.navigateToUrl(URL)
+		if(RunConfiguration.getExecutionProfile()=='default')
+			WebUI.navigateToUrl(URL)
 	}
 	/*
 	 * Scenario
 	 */
 	@When('clicking on (.*) in the bottom of (.*) card')
 	def clickOnSeeMore(String anchorText,String categorie) {
-		TestObject myNewObject = new TestObject(item)
-		def objectXpath="//div[@data-a-card-type='basic' and .//text()='Gaming accessories']//div[contains(@class,'footer')]/a"
-		myNewObject.addProperty('xpath',ConditionType.EQUALS, objectXpath)
-		WebUI.click(myNewObject as TestObject)
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//div[.//h2[text()='${categorie}'] and @data-a-card-type='basic']//div[contains(@class,'footer')]//a[text()='${anchorText}']"
+		def newTestObject=testObjectClassInstance.createTestObject(anchorText,'xpath',objectXpath,ConditionType.EQUALS)
+		WebUI.click(newTestObject as TestObject)
+	}
+	@Then('I should see different item categories under selected (.*)')
+	def assertSeeMoreClicked(String categorieName) {
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//div[contains(@class,'bxc-grid__row')]//div[contains(@class,'bxc-grid__column--1-of-5')]/div/div"
+		def newTestObject=testObjectClassInstance.createTestObject(categorieName,'xpath',objectXpath,ConditionType.EQUALS)
+		assert(WebUI.findWebElements(newTestObject,20).size >0)
+	}
+	@When('clicking on (.*) card')
+	def selectingCategorie(String categorieName) {
+		
+	}
+	@When('I close the browser')
+	def closeTheBrowser() {
+		WebUI.closeBrowser()
 	}
 }
