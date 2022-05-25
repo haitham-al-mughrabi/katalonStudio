@@ -43,10 +43,11 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 import com.kms.katalon.core.configuration.RunConfiguration
 
+import org.jsoup.*
 import haitham.TestObjectStuff
 
 class AddMutlipleItemsToCart {
-	
+
 	/*
 	 * Background
 	 */
@@ -54,7 +55,7 @@ class AddMutlipleItemsToCart {
 	def launchBrowser() {
 		if(RunConfiguration.getExecutionProfile()=='default')
 			WebUI.openBrowser('')
-		else 
+		else
 			WebUI.openBrowser(GlobalVariable.website)
 	}
 	@And('navigate to (.*)')
@@ -65,7 +66,7 @@ class AddMutlipleItemsToCart {
 	/*
 	 * Scenario
 	 */
-	@When('clicking on (.*) in the bottom of (.*) card')
+	@When('clicking on -(.*)- in the bottom of (.*) card wrapper')
 	def clickOnSeeMore(String anchorText,String categorie) {
 		def testObjectClassInstance = new TestObjectStuff()
 		def objectXpath="//div[.//h2[text()='${categorie}'] and @data-a-card-type='basic']//div[contains(@class,'footer')]//a[text()='${anchorText}']"
@@ -81,7 +82,64 @@ class AddMutlipleItemsToCart {
 	}
 	@When('clicking on (.*) card')
 	def selectingCategorie(String categorieName) {
-		
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//div[contains(@class,'bxc-grid__row')]//div[contains(@class,'bxc-grid__column--1-of-5')]/div/div[.//img[@alt='${categorieName}']]"
+		def newTestObject=testObjectClassInstance.createTestObject(categorieName,'xpath',objectXpath,ConditionType.EQUALS)
+		WebUI.click(newTestObject)
+	}
+	@Then('I should see number of items under the selected (.*) categories collection')
+	def verifyGettingCategorieitems(String categorieName){
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath='//div[contains(@data-cel-widget,"search_result") and not(@egaabirrd) and @data-component-type]'
+		def newTestObject=testObjectClassInstance.createTestObject(categorieName,'xpath',objectXpath,ConditionType.EQUALS)
+		assert(WebUI.findWebElements(newTestObject,20).size >0)
+	}
+	@And('(.*) keyword must be contained in the information text on the header')
+	def verifyCategorieResults(String categorieName) {
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//span[@class='a-color-state a-text-bold']"
+		def newTestObject=testObjectClassInstance.createTestObject(categorieName,'xpath',objectXpath,ConditionType.EQUALS)
+		def elementText = WebUI.getText(newTestObject)
+		if(elementText.contains(categorieName.toLowerCase())==false)
+			KeywordUtil.markFailed('Categorie name does not match')
+	}
+	@When('selecting (.*) from Price list')
+	def selectPriceRange(String priceRange){
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//li//a/span[contains(text(),'${priceRange}')]"
+		def newTestObject=testObjectClassInstance.createTestObject('price'+priceRange,'xpath',objectXpath,ConditionType.EQUALS)
+		WebUI.click(newTestObject)
+	}
+	@Then('I should see items between low and high of the (.*) price range')
+	def verifyPriceRange(String priceRange) {
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//div[contains(@data-cel-widget,'search_result') and not(@egaabirrd) and @data-component-type]"
+		def newTestObject=testObjectClassInstance.createTestObject('price'+priceRange,'xpath',objectXpath,ConditionType.EQUALS)
+		WebDriver myDriver = DriverFactory.getWebDriver()
+		myDriver.findElement(By.xpath(objectXpath)).each{element->
+			def htmlParsedPage = Jsoup.parse(element)
+			println htmlParsedPage
+		}
+		KeywordUtil.markFailedAndStop('exit(0)')
+		GroovyShell intilizedShell = new GroovyShell()
+		WebUI.findWebElements(newTestObject,20).each{item->
+
+
+			String condition
+			if(priceRange.contains('Up')) {
+				condition=' > '
+				priceRange.split('').each{
+					if (it.isInteger()==true){
+						condition+=it
+					}
+				}
+			}
+			else if (priceRange.contains('to')) {
+			}
+			else if(priceRange.contains('Above')) {
+			}
+			intilizedShell.evaluate("""${it} ${condition} """)
+		}
 	}
 	@When('I close the browser')
 	def closeTheBrowser() {

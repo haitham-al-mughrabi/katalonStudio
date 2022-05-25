@@ -6,6 +6,7 @@
    <UUID>37b7f200-9099-45cd-afb6-64acd12e00f3</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+   <projectFileLocation>/Users/haithamal/git/katalonStudio/BDD project/BDD project.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

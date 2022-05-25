@@ -16,19 +16,30 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.By
+import org.openqa.selenium.WebDriver
 
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import com.kms.katalon.core.util.KeywordUtil
 import org.openqa.selenium.WebElement
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webui.driver.DriverFactory
 
-WebUI.openBrowser('https://katalon-demo-cura.herokuapp.com/')
-// Wait for the browser to be stable
-WebUI.delay(3)
+import org.jsoup.Jsoup;
+import us.codecraft.xsoup.Xsoup;
+import haitham.TestObjectStuff
 
-TestObject testObj = findTestObject('icon_Social_networking')
-List<WebElement> elements = WebUI.findWebElements(testObj, 10)
-for (int i = 0;  i < elements.size(); ++i) {
-	KeywordUtil.logInfo(elements.get(i).toString())
-}
+WebUI.openBrowser('https://www.google.com')
+def testObjectClassInstance = new TestObjectStuff()
+def objectXpath='//img[@alt="عيد استقلال الأردن 2022"]/../../..'
+def newTestObject=testObjectClassInstance.createTestObject('path','xpath',objectXpath,ConditionType.EQUALS)
+WebDriver myDriver = DriverFactory.getWebDriver()
+def webElement=myDriver.findElement(By.xpath(objectXpath))
+println webElement
+def document = Jsoup.parse(webElement) 
+
+String result = Xsoup.compile("//a/@href").evaluate(document).get();
+
+List<String> list = Xsoup.compile("//tr/td/text()").evaluate(document).list();
+println list
