@@ -30,16 +30,11 @@ import org.jsoup.Jsoup;
 import us.codecraft.xsoup.Xsoup;
 import haitham.TestObjectStuff
 
-WebUI.openBrowser('https://www.google.com')
-def testObjectClassInstance = new TestObjectStuff()
-def objectXpath='//img[@alt="عيد استقلال الأردن 2022"]/../../..'
-def newTestObject=testObjectClassInstance.createTestObject('path','xpath',objectXpath,ConditionType.EQUALS)
+WebUI.openBrowser('https://www.amazon.com/s?k=oculus&i=electronics-intl-ship&bbn=16225009011&rh=p_36%3A1253506011&dc&pf_rd_i=23508887011&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=434db2ed-6d53-4c59-b173-e8cd550a2e4f&pf_rd_r=4DPXCBHH7FTCYS8MN1Z6&pf_rd_s=merchandised-search-5&pf_rd_t=101&qid=1653478951&rnid=386442011&ref=sr_nr_p_36_4')
 WebDriver myDriver = DriverFactory.getWebDriver()
-def webElement=myDriver.findElement(By.xpath(objectXpath))
-println webElement
-def document = Jsoup.parse(webElement) 
-
-String result = Xsoup.compile("//a/@href").evaluate(document).get();
-
-List<String> list = Xsoup.compile("//tr/td/text()").evaluate(document).list();
-println list
+def objectXpath="//div[contains(@data-cel-widget,'search_result') and not(@egaabirrd) and @data-component-type]"
+myDriver.findElements(By.xpath(objectXpath)).each{element->
+	def priceTag= element.findElement(By.xpath('//span[@class="a-price"]/span[1]'))
+	println priceTag.getAttribute('innerHTML').replace('$', '')
+}
+WebUI.closeBrowser()

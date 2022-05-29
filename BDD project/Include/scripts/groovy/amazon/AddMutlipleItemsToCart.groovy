@@ -45,16 +45,21 @@ import com.kms.katalon.core.configuration.RunConfiguration
 
 import org.jsoup.*
 import haitham.TestObjectStuff
+import haitham.globalVariablesStuff
+import haitham.globalVariablesStuff as gvs
 
 class AddMutlipleItemsToCart {
-
+	
 	/*
 	 * Background
 	 */
 	@Given('open browser')
 	def launchBrowser() {
-		if(RunConfiguration.getExecutionProfile()=='default')
+		if(RunConfiguration.getExecutionProfile()=='default') {
 			WebUI.openBrowser('')
+			def globalVariablesStuffObject = new gvs()
+			globalVariablesStuffObject.addGlobalVariable('cartValue',0 as Integer)
+		}
 		else
 			WebUI.openBrowser(GlobalVariable.website)
 	}
@@ -90,7 +95,7 @@ class AddMutlipleItemsToCart {
 	@Then('I should see number of items under the selected (.*) categories collection')
 	def verifyGettingCategorieitems(String categorieName){
 		def testObjectClassInstance = new TestObjectStuff()
-		def objectXpath='//div[contains(@data-cel-widget,"search_result") and not(@egaabirrd) and @data-component-type]'
+		def objectXpath='//div[@data-component-type and @data-index]'
 		def newTestObject=testObjectClassInstance.createTestObject(categorieName,'xpath',objectXpath,ConditionType.EQUALS)
 		assert(WebUI.findWebElements(newTestObject,20).size >0)
 	}
@@ -113,21 +118,28 @@ class AddMutlipleItemsToCart {
 	@Then('I should see items between low and high of the (.*) price range')
 	def verifyPriceRange(String priceRange) {
 		def testObjectClassInstance = new TestObjectStuff()
-		def objectXpath="//div[contains(@data-cel-widget,'search_result') and not(@egaabirrd) and @data-component-type]"
-		def newTestObject=testObjectClassInstance.createTestObject('price'+priceRange,'xpath',objectXpath,ConditionType.EQUALS)
 		WebDriver myDriver = DriverFactory.getWebDriver()
-		myDriver.findElement(By.xpath(objectXpath)).each{element->
-			def htmlParsedPage = Jsoup.parse(element)
-			println htmlParsedPage
+		def objectXpath="//div[@data-component-type and @data-index]"
+		for (element in myDriver.findElements(By.xpath(objectXpath))){
+		def priceTagValue,itemName
+		try {
+			priceTagValue= element.findElement(By.xpath('.//span[@class="a-price"]/span[1]')).getAttribute('innerHTML').replace('$', '')
+			itemName = element.findElement(By.xpath('.//h2/a/span')).getAttribute('innerHTML')
+			println ("Item name: $itemName")
+			def globalVariablesStuffObject = new gvs()
+			globalVariablesStuffObject.addGlobalVariable('itemName',itemName)
+			globalVariablesStuffObject.addGlobalVariable('priceTagValue',priceTagValue)
 		}
-		KeywordUtil.markFailedAndStop('exit(0)')
-		GroovyShell intilizedShell = new GroovyShell()
-		WebUI.findWebElements(newTestObject,20).each{item->
-
-
+		catch(Exception e) {
+			KeywordUtil.logInfo('Unable to find price tag on $itemName item.')
+			priceTagValue=null
+		}
+		if (priceTagValue!=null) {
+			KeywordUtil.logInfo("Verifying $itemName price tag range")
+			GroovyShell intilizedShell = new GroovyShell()
 			String condition
-			if(priceRange.contains('Up')) {
-				condition=' > '
+			if(priceRange.contains('Up') || priceRange.contains('Under')) {
+				condition="${priceTagValue} <= "
 				priceRange.split('').each{
 					if (it.isInteger()==true){
 						condition+=it
@@ -135,10 +147,51 @@ class AddMutlipleItemsToCart {
 				}
 			}
 			else if (priceRange.contains('to')) {
+				def priceRangeList = priceRange.split('to')
+				condition = "${priceTagValue} >= ${priceRangeList[0].replace('$','').toFloat().toInteger()} && ${priceTagValue} <= ${priceRangeList[1].replace('$','').toFloat().toInteger()}"
 			}
 			else if(priceRange.contains('Above')) {
+				condition="${priceTagValue} >= "
+				priceRange.split('').each{
+					if (it.isInteger()==true){
+						condition+=it
+					}
+				}
 			}
-			intilizedShell.evaluate("""${it} ${condition} """)
+			def assertionResult = intilizedShell.evaluate("""${condition}""")
+			if (assertionResult == false)
+				KeywordUtil.markWarning("Price tag value does not match the price range for ${itemName} item. Price range: ${priceRange}. Price tag: ${priceTagValue}")
+			else if(assertionResult == true)
+				KeywordUtil.logInfo("Price tag value match the price range for ${itemName} item. Price range: ${priceRange}. Price tag: ${priceTagValue}")
+		}
+	  }
+	}
+	@When ("I click on (.*) to select the item")
+	def selectItem(def selectedItemToBuy) {
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//h2/a/span[contains(text(),'${selectedItemToBuy}')]"
+		def newTestObject=testObjectClassInstance.createTestObject(selectedItemToBuy,'xpath',objectXpath,ConditionType.EQUALS)
+		WebUI.click(newTestObject as TestObject)
+	}
+	
+	@Then ("I should see (.*) item page")
+	def checkSelectedItemPage(def itemName) {
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//span[@id='productTitle']"
+		def newTestObject=testObjectClassInstance.createTestObject(itemName,'xpath',objectXpath,ConditionType.EQUALS)
+		String itemGottenName=WebUI.getText(newTestObject)
+		if (itemGottenName.contains(itemName)==false) {
+			KeywordUtil.markError("Expected to get item name as $itemName but got $itemGottenName")
+		}
+	}
+	@And ("(.*)'s price should match (.*)")
+	def checkPriceTag(def itemName, def priceTagValue) {
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//div[contains(@id,'title')]/following-sibling::div//tbody//tr//td//span/preceding-sibling::span[contains(text(),'${(char)36}')]"
+		WebDriver myDriver = DriverFactory.getWebDriver()
+		def itemPriceTagValue = myDriver.findElement(By.xpath(objectXpath)).getAttribute('innerHTML')
+		if (itemPriceTagValue!= priceTagValue) {
+			KeywordUtil.markError("Expected to get item name as $priceTagValue but got $itemPriceTagValue")
 		}
 	}
 	@When('I close the browser')

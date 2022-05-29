@@ -9,4 +9,9 @@
       <initValue>'https://www.amazon.com'</initValue>
       <name>website</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>0</initValue>
+      <name>cartValue</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

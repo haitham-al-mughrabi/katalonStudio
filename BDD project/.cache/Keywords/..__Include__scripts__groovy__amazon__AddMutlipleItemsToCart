@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "160B5A39FADFB749E2BBF702D412B14F",
+  "keywordFileContentHash": "4F8A61A117A617605B6411750131FCD6",
   "keywordClasses": [
     {
       "name": "amazon.AddMutlipleItemsToCart",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }
