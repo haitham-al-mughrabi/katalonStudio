@@ -1,10 +1,7 @@
 Feature: Add multiple items to the cart.
 
-  Background: 
-    Given open browser
-    And navigate to https://www.amazon.com
-
   Scenario Outline: Add multiple item to the cart from different categories
+    When navigate to https://www.amazon.com
     When clicking on -See more- in the bottom of <CatergoriesCollection> card wrapper
     Then I should see different item categories under selected <CatergoriesCollection>
     When clicking on <Catergorie> card
@@ -18,10 +15,10 @@ Feature: Add multiple items to the cart.
     When Adding <SelectedItemToBuy> to the cart
     Then Item should be added to the cart
     And Item count of the cart should be increased by 1
-    When Back to home screen
-    When I close the browser
 
     Examples: 
       | CatergoriesCollection | Catergorie | PriceRange   | SelectedItemToBuy                                                 | Price   |
       | Gaming accessories    | Oculus     | $100 to $200 | GearIT USB 3.0                                                    | $137.99 |
-      
+      | Gaming accessories    | Chairs     | $50 to $100  | YSSOA Backrest and Seat Height                                    | $99.99  |
+      | Gaming accessories    | Apparel    | Up to $25    | 2 Pairs Do Not Disturb Funny Short Sock Gamer                     | $9.99   |
+      | Gaming accessories    | Playstation  | $35 & Above  | PlayStation Classic | $78.95  |

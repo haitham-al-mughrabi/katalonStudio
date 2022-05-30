@@ -49,28 +49,11 @@ import haitham.globalVariablesStuff
 import haitham.globalVariablesStuff as gvs
 
 class AddMutlipleItemsToCart {
-	
-	/*
-	 * Background
-	 */
-	@Given('open browser')
-	def launchBrowser() {
-		if(RunConfiguration.getExecutionProfile()=='default') {
-			WebUI.openBrowser('')
-			def globalVariablesStuffObject = new gvs()
-			globalVariablesStuffObject.addGlobalVariable('cartValue',0 as Integer)
-		}
-		else
-			WebUI.openBrowser(GlobalVariable.website)
-	}
-	@And('navigate to (.*)')
+	@When('navigate to (.*)')
 	def naviagteToWebsite(String URL) {
-		if(RunConfiguration.getExecutionProfile()=='default')
-			WebUI.navigateToUrl(URL)
+		WebUI.navigateToUrl(URL)
 	}
-	/*
-	 * Scenario
-	 */
+
 	@When('clicking on -(.*)- in the bottom of (.*) card wrapper')
 	def clickOnSeeMore(String anchorText,String categorie) {
 		def testObjectClassInstance = new TestObjectStuff()
@@ -125,7 +108,6 @@ class AddMutlipleItemsToCart {
 		try {
 			priceTagValue= element.findElement(By.xpath('.//span[@class="a-price"]/span[1]')).getAttribute('innerHTML').replace('$', '')
 			itemName = element.findElement(By.xpath('.//h2/a/span')).getAttribute('innerHTML')
-			println ("Item name: $itemName")
 			def globalVariablesStuffObject = new gvs()
 			globalVariablesStuffObject.addGlobalVariable('itemName',itemName)
 			globalVariablesStuffObject.addGlobalVariable('priceTagValue',priceTagValue)
@@ -183,6 +165,8 @@ class AddMutlipleItemsToCart {
 		if (itemGottenName.contains(itemName)==false) {
 			KeywordUtil.markError("Expected to get item name as $itemName but got $itemGottenName")
 		}
+		def globalVariablesStuffObject = new gvs()
+		globalVariablesStuffObject.addGlobalVariable('itemGottenName',itemGottenName)
 	}
 	@And ("(.*)'s price should match (.*)")
 	def checkPriceTag(def itemName, def priceTagValue) {
@@ -194,6 +178,52 @@ class AddMutlipleItemsToCart {
 			KeywordUtil.markError("Expected to get item name as $priceTagValue but got $itemPriceTagValue")
 		}
 	}
+	@When ("Adding (.*) to the cart")
+	def addingItemToTheCart(def selectedItemToBuy) {
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//input[@type='submit' and contains(@id,'cart')]"
+		def newTestObject=testObjectClassInstance.createTestObject(selectedItemToBuy,'xpath',objectXpath,ConditionType.EQUALS)
+		WebUI.click(newTestObject as TestObject)
+	}
+	@Then ("Item should be added to the cart")
+	def verifyAddingToCart() {
+		//Click on cart
+		def testObjectClassInstance = new TestObjectStuff()
+		def objectXpath="//div[@id='nav-tools']/a[last()]"
+		def newTestObject=testObjectClassInstance.createTestObject('selectedItem','xpath',objectXpath,ConditionType.EQUALS)
+		WebUI.click(newTestObject as TestObject)
+		//Verify cart items
+		WebDriver myDriver = DriverFactory.getWebDriver()
+		objectXpath="//div[@data-name= 'Active Items']/div[@data-asin]"
+		Boolean isItemAddedToCart=false
+		def cartItems =myDriver.findElements(By.xpath(objectXpath))
+		def globalVariablesStuffObject = new gvs()
+		globalVariablesStuffObject.addGlobalVariable('cartItems',cartItems)
+		for (element in cartItems){
+			def itemName = element.findElement(By.xpath('.//span/span/span[1]')).getAttribute('innerHTML')
+			if(itemName == GlobalVariable.itemGottenName || itemName.contains(GlobalVariable.itemGottenName)) {
+				isItemAddedToCart=true
+				break
+			}
+		}
+		if(isItemAddedToCart==false)
+			KeywordUtil.markFailed("Item did not get added to cart. Item name: ${GlobalVariable.itemGottenName}")
+		else {
+			KeywordUtil.logInfo("Item has been successfully added to cart. Item name: ${GlobalVariable.itemGottenName}")
+			GlobalVariable.cartValue=GlobalVariable.cartValue+1
+		}
+	}
+	@And ("Item count of the cart should be increased by 1")
+	def verifyCartItemCount() {		
+		if (GlobalVariable.cartValue == GlobalVariable.cartItems.size()) {
+			KeywordUtil.logInfo("Items count are verified. Items count: ${GlobalVariable.cartValue}")
+		}
+		else {
+			KeywordUtil.markFailed("Items count on cart don't match the expected count cart. Item count in cart: ${GlobalVariable.cartItems.size()}. Item counter: ${GlobalVariable.cartValue}")
+
+		}
+	}
+	
 	@When('I close the browser')
 	def closeTheBrowser() {
 		WebUI.closeBrowser()
