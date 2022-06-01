@@ -104,49 +104,49 @@ class AddMutlipleItemsToCart {
 		WebDriver myDriver = DriverFactory.getWebDriver()
 		def objectXpath="//div[@data-component-type and @data-index]"
 		for (element in myDriver.findElements(By.xpath(objectXpath))){
-		def priceTagValue,itemName
-		try {
-			priceTagValue= element.findElement(By.xpath('.//span[@class="a-price"]/span[1]')).getAttribute('innerHTML').replace('$', '')
-			itemName = element.findElement(By.xpath('.//h2/a/span')).getAttribute('innerHTML')
-			def globalVariablesStuffObject = new gvs()
-			globalVariablesStuffObject.addGlobalVariable('itemName',itemName)
-			globalVariablesStuffObject.addGlobalVariable('priceTagValue',priceTagValue)
-		}
-		catch(Exception e) {
-			KeywordUtil.logInfo('Unable to find price tag on $itemName item.')
-			priceTagValue=null
-		}
-		if (priceTagValue!=null) {
-			KeywordUtil.logInfo("Verifying $itemName price tag range")
-			GroovyShell intilizedShell = new GroovyShell()
-			String condition
-			if(priceRange.contains('Up') || priceRange.contains('Under')) {
-				condition="${priceTagValue} <= "
-				priceRange.split('').each{
-					if (it.isInteger()==true){
-						condition+=it
+			def priceTagValue,itemName
+			try {
+				priceTagValue= element.findElement(By.xpath('.//span[@class="a-price"]/span[1]')).getAttribute('innerHTML').replace('$', '')
+				itemName = element.findElement(By.xpath('.//h2/a/span')).getAttribute('innerHTML')
+				def globalVariablesStuffObject = new gvs()
+				globalVariablesStuffObject.addGlobalVariable('itemName',itemName)
+				globalVariablesStuffObject.addGlobalVariable('priceTagValue',priceTagValue)
+			}
+			catch(Exception e) {
+				KeywordUtil.logInfo('Unable to find price tag on $itemName item.')
+				priceTagValue=null
+			}
+			if (priceTagValue!=null) {
+				KeywordUtil.logInfo("Verifying $itemName price tag range")
+				GroovyShell intilizedShell = new GroovyShell()
+				String condition
+				if(priceRange.contains('Up') || priceRange.contains('Under')) {
+					condition="${priceTagValue} <= "
+					priceRange.split('').each{
+						if (it.isInteger()==true){
+							condition+=it
+						}
 					}
 				}
-			}
-			else if (priceRange.contains('to')) {
-				def priceRangeList = priceRange.split('to')
-				condition = "${priceTagValue} >= ${priceRangeList[0].replace('$','').toFloat().toInteger()} && ${priceTagValue} <= ${priceRangeList[1].replace('$','').toFloat().toInteger()}"
-			}
-			else if(priceRange.contains('Above')) {
-				condition="${priceTagValue} >= "
-				priceRange.split('').each{
-					if (it.isInteger()==true){
-						condition+=it
+				else if (priceRange.contains('to')) {
+					def priceRangeList = priceRange.split('to')
+					condition = "${priceTagValue} >= ${priceRangeList[0].replace('$','').toFloat().toInteger()} && ${priceTagValue} <= ${priceRangeList[1].replace('$','').toFloat().toInteger()}"
+				}
+				else if(priceRange.contains('Above')) {
+					condition="${priceTagValue} >= "
+					priceRange.split('').each{
+						if (it.isInteger()==true){
+							condition+=it
+						}
 					}
 				}
+				def assertionResult = intilizedShell.evaluate("""${condition}""")
+				if (assertionResult == false)
+					KeywordUtil.markWarning("Price tag value does not match the price range for ${itemName} item. Price range: ${priceRange}. Price tag: ${priceTagValue}")
+				else if(assertionResult == true)
+					KeywordUtil.logInfo("Price tag value match the price range for ${itemName} item. Price range: ${priceRange}. Price tag: ${priceTagValue}")
 			}
-			def assertionResult = intilizedShell.evaluate("""${condition}""")
-			if (assertionResult == false)
-				KeywordUtil.markWarning("Price tag value does not match the price range for ${itemName} item. Price range: ${priceRange}. Price tag: ${priceTagValue}")
-			else if(assertionResult == true)
-				KeywordUtil.logInfo("Price tag value match the price range for ${itemName} item. Price range: ${priceRange}. Price tag: ${priceTagValue}")
 		}
-	  }
 	}
 	@When ("I click on (.*) to select the item")
 	def selectItem(def selectedItemToBuy) {
@@ -155,7 +155,7 @@ class AddMutlipleItemsToCart {
 		def newTestObject=testObjectClassInstance.createTestObject(selectedItemToBuy,'xpath',objectXpath,ConditionType.EQUALS)
 		WebUI.click(newTestObject as TestObject)
 	}
-	
+
 	@Then ("I should see (.*) item page")
 	def checkSelectedItemPage(def itemName) {
 		def testObjectClassInstance = new TestObjectStuff()
@@ -214,7 +214,7 @@ class AddMutlipleItemsToCart {
 		}
 	}
 	@And ("Item count of the cart should be increased by 1")
-	def verifyCartItemCount() {		
+	def verifyCartItemCount() {
 		if (GlobalVariable.cartValue == GlobalVariable.cartItems.size()) {
 			KeywordUtil.logInfo("Items count are verified. Items count: ${GlobalVariable.cartValue}")
 		}
@@ -223,7 +223,7 @@ class AddMutlipleItemsToCart {
 
 		}
 	}
-	
+
 	@When('I close the browser')
 	def closeTheBrowser() {
 		WebUI.closeBrowser()

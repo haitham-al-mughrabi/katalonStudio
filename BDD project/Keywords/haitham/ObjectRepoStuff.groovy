@@ -18,35 +18,11 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import com.kms.katalon.core.configuration.RunConfiguration
 
 import internal.GlobalVariable
 
-import groovy.transform.SourceURI
-import java.nio.file.Path
-import java.nio.file.Paths
-import java.io.File
- 
-public class pathStuff {
+public class ObjectRepoStuff {
 	@Keyword
-	def getPath() {
-		String dirName = RunConfiguration.getProjectDir()
-		
-		return dirName
-	}
-	@Keyword
-	def setPath(def rootPath, def filePath) {
-		try {
-			if(rootPath!=null && filePath!=null) {
-				return new File(rootPath, filePath).toString()
-				return Paths.get(rootPath,filePath)
-			}
-			else
-				return null
-		}
-		catch(Exception e) {
-			println e
-			return null
-		}
+	def findObjectInObjectRepo(objectName) {
 	}
 }
