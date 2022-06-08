@@ -18,12 +18,20 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 def rootpath = CustomKeywords.'haitham.pathStuff.getPath'()
-CustomKeywords.'haitham.TestObjectStuff.createTestObject'('rootpath', rootpath)
-CustomKeywords.'haitham.TestObjectStuff.createTestObject'('currentPage', 'home')
-def userCridentails = CustomKeywords.'haitham.Faker.makeFakerObject'(
-	['fullname':'Name.fullName']
-	)
-println userCridentails
-
-//CucumberKW.runFeatureFile('Include/features/LoginAndSignUp/Signup.feature')
-
+CustomKeywords."haitham.Profile.profileChanger"("equityzen-test")
+CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('rootpath', rootpath)
+CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('currentPage', 'home')
+def fakerInstence = CustomKeywords.'haitham.Faker.initFaker'()
+def userCredintails=[
+	"fullName":fakerInstence.name().fullName(),
+	"username":fakerInstence.name().username(),
+	"capitalCity":fakerInstence.nation().capitalCity(),
+	"nationality":fakerInstence.nation().nationality(),
+	"age":fakerInstence.number().digit()+18,
+	"phoneNumber":fakerInstence.phoneNumber().phoneNumber(),
+	"title":fakerInstence.job().title()
+	]
+CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('userCredintails', userCredintails)	
+WebUI.openBrowser(GlobalVariable['home'])
+CucumberKW.runFeatureFile('Include/features/LoginAndSignUp/Signup.feature')
+WebUI.closeBrowser()

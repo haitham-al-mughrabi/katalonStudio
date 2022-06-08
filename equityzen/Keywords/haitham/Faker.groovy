@@ -37,13 +37,5 @@ public class Faker {
 		FakerProvider faker = new FakerProvider();
 		return faker
 	}
-	@Keyword
-	def makeFakerObject(Map<String,String> prob) {
-		Map<String,String> resutls=[:]
-		def fakerInstence = initFaker()
-		GroovyShell intilizedShell = new GroovyShell()
-		prob.forEach { key, value -> 
-			resutls[key]=intilizedShell.evaluate("${fakerInstence}.${value} ")
-		}
-	}
+	
 }

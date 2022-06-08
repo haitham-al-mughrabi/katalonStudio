@@ -34,4 +34,9 @@
       <initValue>'IY/3J0ptp1NLSddileVLvA=='</initValue>
       <name>databasePassword</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://test-quality.nyc.equityzen.com/?flow=signup'</initValue>
+      <name>signup</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

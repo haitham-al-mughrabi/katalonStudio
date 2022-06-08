@@ -29,8 +29,10 @@ public class globalVariablesStuff {
 	void addGlobalVariable(String globalVariableName, def globalVariableValue) {
 		GroovyShell intilizedShell = new GroovyShell()
 		MetaClass insistorMetaClass = intilizedShell.evaluate("internal.GlobalVariable").metaClass
-		String globalVariableDifined = "get" + globalVariableName.capitalize()
-		insistorMetaClass.'static'."$globalVariableDifined" = { -> return globalVariableValue }
+		String getterGlobalVariableDifined = "get" + globalVariableName.capitalize()
+		String setterGlobalVariableDifined = "set" + globalVariableName.capitalize()
+		insistorMetaClass.'static'."$getterGlobalVariableDifined" = { -> return globalVariableValue }
+		insistorMetaClass.'static'."$setterGlobalVariableDifined" = { newValue-> globalVariableValue=newValue }
 		insistorMetaClass.'static'."$globalVariableName" = globalVariableValue
 	}
 }

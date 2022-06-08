@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "BF8031DD00BBF653D3525830FC098E85",
+  "keywordClasses": [
+    {
+      "name": "loginAndSignup.LoginBDD",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

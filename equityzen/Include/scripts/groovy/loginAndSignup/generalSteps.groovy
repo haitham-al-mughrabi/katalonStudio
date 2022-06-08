@@ -15,20 +15,35 @@ import com.kms.katalon.core.testcase.TestCase
 import com.kms.katalon.core.testdata.TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.sun.jna.platform.KeyboardUtils
 
 import internal.GlobalVariable
 
-public class generalSteps {
-	@When("I check for the (\\d+) in step")
-	def I_check_for_the_value_in_step(int value) {
-		println value
-	}
+import cucumber.api.java.en.And
+import cucumber.api.java.en.Given
+import cucumber.api.java.en.Then
+import cucumber.api.java.en.When
 
-	@Then("I verify the (.*) in step")
-	def I_verify_the_status_in_step(String status) {
-		println status
+public class generalSteps {
+	@When("The user clicks on (.*)")
+	def perofrmClickAction(def elementToClick) {
+		WebUI.click(findTestObject("Object Repository/${GlobalVariable['currentPage']}/${elementToClick}"))
+	}
+	@Then("The user should be navigated to (.*) page")
+	def verifyPage(def pageName) {
+		WebUI.delay(5)
+		String pageURL = WebUI.getUrl()
+		if(pageURL == GlobalVariable[pageName]) {
+			KeywordUtil.logInfo("You are on $pageName page!")
+			GlobalVariable['currentPage']= pageName
+			println GlobalVariable['currentPage']
+		}
+		else if(pageURL == GlobalVariable[pageName]){
+			KeywordUtil.markFailedAndStop("Failed to navigate to $pageName. Current page url : $pageURL. Expected URL: $GlobalVariable[pageName]")
+		}
 	}
 }

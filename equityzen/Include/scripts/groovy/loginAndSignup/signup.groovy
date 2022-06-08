@@ -44,13 +44,4 @@ import cucumber.api.java.en.When
 
 
 class signup {
-	@When("I check for the (\\d+) in step")
-	def I_check_for_the_value_in_step(int value) {
-		println value
-	}
-
-	@Then("I verify the (.*) in step")
-	def I_verify_the_status_in_step(String status) {
-		println status
-	}
 }
