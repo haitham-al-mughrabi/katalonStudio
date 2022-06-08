@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>connect to sqlite-database</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a2ea58fb-b13e-4259-9d43-ef70bffc9d77</testCaseGuid>
+</TestCaseEntity>

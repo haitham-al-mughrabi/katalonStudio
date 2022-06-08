@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "41F9E636B78C1FD7F2090523C464F52D",
+  "keywordClasses": [
+    {
+      "name": "haitham.ObjectRepoStuff",
+      "keywordMethods": [
+        {
+          "name": "findObjectInObjectRepo",
+          "parameters": [
+            {
+              "name": "objectName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

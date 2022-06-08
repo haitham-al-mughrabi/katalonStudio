@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "9D523891E36A53A84BA96F115576A1E1",
+  "keywordClasses": [
+    {
+      "name": "haitham.Profile",
+      "keywordMethods": [
+        {
+          "name": "profileChanger",
+          "parameters": [
+            {
+              "name": "perfaredProfile",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

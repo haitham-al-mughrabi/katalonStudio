@@ -1,0 +1,54 @@
+{
+  "keywordFileContentHash": "692EFEF5399A3ACFAA7B112F6F6FC2D3",
+  "keywordClasses": [
+    {
+      "name": "haitham.Faker",
+      "keywordMethods": [
+        {
+          "name": "initFaker",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "makeFakerObject",
+          "parameters": [
+            {
+              "name": "prob",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.util.Map",
+                "unresolvedClassName": "Map",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [
+                  {
+                    "fullClassName": "java.lang.String",
+                    "unresolvedClassName": "String",
+                    "isArray": false,
+                    "isGnericsPlaceHolder": false,
+                    "hasImmutableClassName": false,
+                    "genericsTypes": [],
+                    "errorOnParsing": false
+                  },
+                  {
+                    "fullClassName": "java.lang.String",
+                    "unresolvedClassName": "String",
+                    "isArray": false,
+                    "isGnericsPlaceHolder": false,
+                    "hasImmutableClassName": false,
+                    "genericsTypes": [],
+                    "errorOnParsing": false
+                  }
+                ],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

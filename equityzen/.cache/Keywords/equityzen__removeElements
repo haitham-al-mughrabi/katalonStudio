@@ -1,0 +1,16 @@
+{
+  "keywordFileContentHash": "91A531EC1F3D248448371C86C66F17AB",
+  "keywordClasses": [
+    {
+      "name": "equityzen.removeElements",
+      "keywordMethods": [
+        {
+          "name": "removeIntercomElement",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

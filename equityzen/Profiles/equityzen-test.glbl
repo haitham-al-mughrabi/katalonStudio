@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>equityzen-test</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://test-quality.nyc.equityzen.com/accounts/login/'</initValue>
+      <name>login</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://test-quality.nyc.equityzen.com/listings/'</initValue>
+      <name>listings</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://test-quality.nyc.equityzen.com/'</initValue>
+      <name>home</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'jdbc:mysql://localhost:3306/equityzen'</initValue>
+      <name>databaseURL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'root'</initValue>
+      <name>databaseUser</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'IY/3J0ptp1NLSddileVLvA=='</initValue>
+      <name>databasePassword</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>logoutNavBarElement</name>
+   <tag></tag>
+   <elementGuidId>f4b396e8-9ba5-40fa-b11b-06a6aa539468</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[@title=&quot;Logout&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//li[@title=&quot;Logout&quot;]</value>
+      <webElementGuid>3c8f274a-d387-4967-92cf-178c6e38cbb9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
