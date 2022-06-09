@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "198465F205413304353190FF4262CE55",
+  "keywordFileContentHash": "DA9DE2AA49599CEF889E7C5E2C298151",
   "keywordClasses": [
     {
       "name": "haitham.TestObjectStuff",
@@ -55,6 +55,25 @@
                 "isArray": false,
                 "isGnericsPlaceHolder": false,
                 "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "getTestObjectXpaths",
+          "parameters": [
+            {
+              "name": "testObjectPath",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
                 "genericsTypes": [],
                 "errorOnParsing": false
               }

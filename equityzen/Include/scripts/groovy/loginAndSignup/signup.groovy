@@ -41,7 +41,17 @@ import cucumber.api.java.en.And
 import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
-
+import haitham.handyMethods as HM
+import haitham.TestObjectStuff as TOS
 
 class signup {
+	@Then ("The user should should see all verify icons switched to green")
+	def checkIconChanges() {
+		def hmIntence = new HM(), tosInstence = new TOS()
+		def seleniumDriver = hmIntence.switchToSeleniumWebDriver()
+		def iconXpath= tosInstence.getTestObjectXpaths("Object Repository/signup/antIcon - confirmOrCheckSVG")[0]
+		seleniumDriver.findElements(By.xpath(iconXpath)).forEach{element ->
+			println element.getAttribute('data-icon')
+		}
+	}
 }

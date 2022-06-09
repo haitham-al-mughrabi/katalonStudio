@@ -22,25 +22,57 @@ import internal.GlobalVariable
 
 public class BDDStuff {
 	@Keyword
+	/**
+	 * Convert Datatable type into Map
+	 * @Param dataTable Datatable
+	 * @Returns Map<String, String>
+	 */
 	def castDataTableIntoMap(def dataTable) {
-		Map dataTableAsMap=dataTable.asMap(String.class, String.class)
+		Map dataTableAsMap=dataTable.asMap()
 		return dataTableAsMap
 	}
 	@Keyword
+	/**
+	 * Convert Datatable type into list
+	 * @Param dataTable Datatable
+	 * @Returns List<String>
+	 */
 	def castDataTableIntoList(def dataTable) {
-		List dataTableAsTable=dataTable.asList(String.class)
+		List dataTableAsTable=dataTable.asList()
 		return dataTableAsTable
 	}
 	@Keyword
+	/**
+	 * Convert Datatable type into list of lists
+	 * @Param dataTable Datatable
+	 * @Returns List<List<String>>
+	 */
 	def castDataTableIntoListOfLists(def dataTable) {
-		List<List<String>> dataTableAsListOfLists=dataTable.asLists(String.class)
+		List<List<String>> dataTableAsListOfLists=dataTable.asLists()
 		return dataTableAsListOfLists
 	}
 	@Keyword
+	/**
+	 * Combine two lists into map by using the first list
+	 * items as a key for the map and the second list items
+	 * as a value for the keys
+	 * @Param listOfKeys List
+	 * @Param listOfValues List
+	 * @Returns Map
+	 */
 	def castTwoListsIntoMap(def listOfKeys, def listOfValues) {
 		return [listOfKeys, listOfValues].transpose().collectEntries{[it[0], it[1]]}
 	}
 	@Keyword
+	/**
+	 * Combine a list of keys and lists of lists into list of maps by using the first list
+	 * items as a key for the map and the second list items
+	 * as a value for the keys by iterating on each list and convert them into maps
+	 * then finally store all of the maps as list
+	 * @Param listOfKeys List
+	 * @Param listOfLists List<List>
+	 * @Returns List<Map>
+	 */
 	def castMultipleListsIntoListOfMaps(def listOfKeys,def listOfLists) {
 		def listOfMaps=[]
 		listOfLists.each{list->
@@ -49,9 +81,27 @@ public class BDDStuff {
 		return listOfMaps
 	}
 	@Keyword
+	/**
+	 * Divide list of lists into list of keys and lists of list that contains values
+	 * @param listOfLists List<List>
+	 * @return List<List>
+	 */
 	def castListOfListsIntoListOfKeysAndListOfValueLists(def listOfLists) {
 		def listOfKeys = listOfLists[0]
 		def listOfValueLists = listOfLists[1..listOfLists.size()-1]
 		return [listOfKeys, listOfValueLists]
+	}
+	@Keyword
+	/**
+	 * Convert data table into list of multiple maps by calling castDataTableIntoListOfLists
+	 * which convert the datatable into list then calls castListOfListsIntoListOfKeysAndListOfValueLists
+	 * to divide the list into list of keys and list of lists of values then calls castMultipleListsIntoListOfMaps
+	 * that combine the lists into list of maps
+	 * @Param dataTable DataTable
+	 * @Returns List<Maps>
+	 */
+	def castDataTableIntoListOfMultipleMaps(def dataTable) {
+		def dataTableToList = castDataTableIntoListOfLists(dataTable)
+		return castMultipleListsIntoListOfMaps(castListOfListsIntoListOfKeysAndListOfValueLists(dataTableToList))
 	}
 }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>agreement_input</name>
+   <tag></tag>
+   <elementGuidId>5fc1b407-ca58-4752-8926-f3ba8ded261f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//span[contains(text(),'agree')]//preceding-sibling::span/input[@type='checkbox']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//span[contains(text(),'agree')]//preceding-sibling::span/input[@type='checkbox']</value>
+      <webElementGuid>ee8230bf-0d55-4988-b4f4-36267046fd83</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -22,11 +22,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.sun.jna.platform.KeyboardUtils
 
 import internal.GlobalVariable
-
+import io.cucumber.datatable.DataTable
 import cucumber.api.java.en.And
 import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
+import haitham.BDDStuff as BDD
+import haitham.textEncodeAndDecode as ED
 
 public class generalSteps {
 	@When("The user clicks on (.*)")
@@ -40,10 +42,35 @@ public class generalSteps {
 		if(pageURL == GlobalVariable[pageName]) {
 			KeywordUtil.logInfo("You are on $pageName page!")
 			GlobalVariable['currentPage']= pageName
-			println GlobalVariable['currentPage']
 		}
 		else if(pageURL == GlobalVariable[pageName]){
 			KeywordUtil.markFailedAndStop("Failed to navigate to $pageName. Current page url : $pageURL. Expected URL: $GlobalVariable[pageName]")
 		}
+	}
+	@When ("The user fills (.*)")
+	def fillInputFields(def placeholder,DataTable dataTable) {
+		def bddInstence = new BDD()
+		def edInstence = new ED()
+		def rowsList =bddInstence.castDataTableIntoListOfMultipleMaps(dataTable)
+		rowsList.forEach{
+			def source = it['Source'], data=it['Data'], field=it['Field'],isEncrypted=it['isEncrypted'].toBoolean(),isMasked=it['isMasked'].toBoolean()
+			def dataSource = GlobalVariable[source][data],text
+			if(isEncrypted==true)
+				text=edInstence.decodeText(dataSource)
+			else if(isEncrypted.toBoolean() ==false)
+				text= dataSource
+			def testObject=findTestObject("Object Repository/${GlobalVariable['currentPage']}/${field}")
+			if(isMasked == true)
+				WebUI.setMaskedText(testObject, text)
+			else if(isMasked == false)
+				WebUI.setText(testObject,text )
+			else {
+				KeywordUtil.markFailed('Something went wrong on fillInputFields method')
+			}
+		}
+	}
+	@When ("The user check (.*)")
+	def checkCheckBox(def checkBoxElement) {
+		WebUI.check(findTestObject("Object Repository/${GlobalVariable['currentPage']}/${checkBoxElement}"))
 	}
 }

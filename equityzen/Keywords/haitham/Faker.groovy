@@ -37,5 +37,4 @@ public class Faker {
 		FakerProvider faker = new FakerProvider();
 		return faker
 	}
-	
 }

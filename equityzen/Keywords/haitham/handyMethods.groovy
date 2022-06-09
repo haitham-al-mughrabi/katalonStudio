@@ -20,6 +20,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
+import com.kms.katalon.core.webui.driver.DriverFactory
+import org.openqa.selenium.WebDriver
 
 public class handyMethods {
 	/*
@@ -46,5 +48,10 @@ public class handyMethods {
 				GroovyShell intilizedShell = new GroovyShell()
 				intilizedShell.evaluate("${it} ${condition} ")
 			}
+	}
+	@Keyword
+	def switchToSeleniumWebDriver() {
+		WebDriver seleniumDriver = DriverFactory.getWebDriver()
+		return seleniumDriver
 	}
 }

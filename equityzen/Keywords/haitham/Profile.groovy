@@ -31,7 +31,7 @@ public class Profile {
 	def profileChanger(def perfaredProfile) {
 		if(RunConfiguration.getExecutionProfile()=='default') {
 			try {
-				new ExecutionProfilesLoader().loadProfile(GlobalVariable.perfaredProfile)				
+				new ExecutionProfilesLoader().loadProfile(GlobalVariable.perfaredProfile)
 			}
 			catch(Exception e) {
 				new ExecutionProfilesLoader().loadProfile(perfaredProfile)

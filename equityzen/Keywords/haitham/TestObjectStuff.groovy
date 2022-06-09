@@ -29,4 +29,10 @@ public class TestObjectStuff {
 		newTestObject.addProperty(selectorType,conditionType, selectorHolder)
 		return newTestObject
 	}
+	@Keyword
+	def getTestObjectXpaths(String testObjectPath) {
+		def xpathsList=[]
+		findTestObject(testObjectPath).getXpaths().forEach{xpathsList.add( it.getValue() )}
+		return xpathsList
+	}
 }

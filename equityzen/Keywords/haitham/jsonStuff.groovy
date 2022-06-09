@@ -28,8 +28,8 @@ public class jsonStuff {
 		GroovyShell intilizedShell = new GroovyShell()
 		String definedPath=''
 		for (path in pathString.split("\\."))
-			definedPath=definedPath+"""['$path']"""
-		return intilizedShell.evaluate("""${jsonObject}${definedPath}""")
+			definedPath=definedPath+"['$path']"
+		return intilizedShell.evaluate("${jsonObject}${definedPath}")
 	}
 	@Keyword
 	def parseJsonToMap(def jsonObject) {
