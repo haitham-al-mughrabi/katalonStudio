@@ -9,7 +9,7 @@ repositories {
 
 dependencies {
     implementation 'com.github.javafaker:javafaker:1.0.2'
-
+	
   // sample dependencies
   // rest-assured
   // compile 'io.rest-assured:rest-assured:3.2.0'

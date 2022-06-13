@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "0388FB9C0F29E356DD022069C3F99EB8",
+  "keywordFileContentHash": "96D6FAB139D2ADED18924A734AB477D4",
   "keywordClasses": [
     {
       "name": "haitham.jsonStuff",
@@ -41,6 +41,25 @@
           "parameters": [
             {
               "name": "jsonObject",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "parseMapToJson",
+          "parameters": [
+            {
+              "name": "mapObject",
               "initialExpression": "",
               "type": {
                 "fullClassName": "java.lang.Object",

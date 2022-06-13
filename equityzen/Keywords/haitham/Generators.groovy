@@ -39,9 +39,12 @@ public class Generators {
 			def password='',alpha='A'..'Z',minValue=0, maxValue=alpha.size()
 			if(startWithCapital==true)
 				password+=alpha.get((Math.floor(Math.random()*(maxValue-minValue+1)+minValue)) as int)
-			if(includeNumbers==true)
+			if(includeNumbers==true) {
 				password+=new Random().with {(1..passwordLength).collect {(('a'..'z')+('A'..'Z')+(0..9)).join()[ nextInt((('a'..'z')+('A'..'Z')+(0..9)).join().length())]}.join()}
-			else if (includeNumbers==false)
+				if(password.matches(".*[0-9].*")==false) {
+					password+=new Random().with {(1..4).collect {((0..9)).join()[ nextInt(((0..9)).join().length())]}.join()}
+				}
+			}else if (includeNumbers==false)
 				password+=new Random().with {(1..passwordLength).collect {(('a'..'z')).join()[ nextInt((('a'..'z')).join().length())]}.join()}
 			if(includeSpecialChar==true)
 				password+='$'

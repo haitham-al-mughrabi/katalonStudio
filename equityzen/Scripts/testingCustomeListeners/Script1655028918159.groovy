@@ -14,28 +14,28 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable as GlobalVariable
+import internal.GlobalVariable
+import com.kms.katalon.core.configuration.RunConfiguration
+
+import org.openqa.selenium.By
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.support.events.EventFiringWebDriver as EventFiringWebDriver
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+
+import haitham.TestObjectStuff
+import haitham.jsonStuff 
+import haitham.BrowserListeners as BL
+def blInstence = new BL()
+blInstence.enableBrowserListeners()
+DriverFactory.changeWebDriver(blInstence.swapBrowsers('chrome'))
+
+WebUI.openBrowser('https://test-quality.nyc.equityzen.com/')
+
+//WebUI.click(findTestObject('home/sign_up_button'))
 
 
-def rootpath = CustomKeywords.'haitham.pathStuff.getPath'()
-CustomKeywords."haitham.Profile.profileChanger"("equityzen-test")
-CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('rootpath', rootpath)
-CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('currentPage', 'home')
-def fakerInstence = CustomKeywords.'haitham.Faker.initFaker'()
-def userCredintails=[
-	"fullName":fakerInstence.name().fullName(),
-	"username":fakerInstence.name().username(),
-	"email":fakerInstence.internet().emailAddress(),
-	"capitalCity":fakerInstence.nation().capitalCity(),
-	"nationality":fakerInstence.nation().nationality(),
-	"age":fakerInstence.number().digit()+18,
-	"phoneNumber":fakerInstence.phoneNumber().phoneNumber(),
-	"title":fakerInstence.job().title(),
-	"password":"${CustomKeywords.'haitham.textEncodeAndDecode.encodeText'(CustomKeywords.'haitham.Generators.generateStrongPassword'())}"
-	]
-CustomKeywords.'haitham.globalVariablesStuff.addGlobalVariable'('userCredintails', userCredintails)	
-WebUI.openBrowser(GlobalVariable['home'])
-WebUI.setViewPortSize(1370, 768)
-CucumberKW.runFeatureFile('Include/features/LoginAndSignUp/Signup.feature')
+//WebUI.navigateToUrl('www.google.com')
+
 WebUI.closeBrowser()
+

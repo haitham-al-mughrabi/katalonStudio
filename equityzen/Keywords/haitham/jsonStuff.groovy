@@ -20,7 +20,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
-import groovy.json.JsonSlurper
+import groovy.json.*
 
 public class jsonStuff {
 	@Keyword
@@ -35,5 +35,9 @@ public class jsonStuff {
 	def parseJsonToMap(def jsonObject) {
 		def jsonSlurper = new JsonSlurper()
 		return jsonSlurper.parseText(jsonObject)
+	}
+	@Keyword
+	def parseMapToJson(def mapObject) {
+		return JsonOutput.prettyPrint(JsonOutput.toJson(mapObject))
 	}
 }

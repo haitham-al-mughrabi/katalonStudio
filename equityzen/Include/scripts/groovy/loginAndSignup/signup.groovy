@@ -43,15 +43,23 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 import haitham.handyMethods as HM
 import haitham.TestObjectStuff as TOS
-
+import org.openqa.selenium.WebDriver
 class signup {
 	@Then ("The user should should see all verify icons switched to green")
 	def checkIconChanges() {
 		def hmIntence = new HM(), tosInstence = new TOS()
 		def seleniumDriver = hmIntence.switchToSeleniumWebDriver()
 		def iconXpath= tosInstence.getTestObjectXpaths("Object Repository/signup/antIcon - confirmOrCheckSVG")[0]
-		seleniumDriver.findElements(By.xpath(iconXpath)).forEach{element ->
-			println element.getAttribute('data-icon')
+		seleniumDriver.findElements(By.xpath(iconXpath)).eachWithIndex{element, index ->
+			println "${element.getAttribute('data-icon')}  $index"
+			println "(${iconXpath}//ancestor::span//input[@id])[${index+1}]"
+			if(element.getAttribute('data-icon').toString() != "check-circle") {
+				String elementName = element.findElement(By.xpath("(${iconXpath}//ancestor::span//input[@id])[${index+1}]")).getAttribute('id')
+				KeywordUtil.markFailed("Element $elementName has ${element.getAttribute('data-icon')} class. expected class: check-circle")
+			}
+			else if(element.getAttribute('data-icon').toString() == "check-circle") {
+				KeywordUtil.logInfo("Element has ${element.getAttribute('data-icon')} class")
+			}
 		}
 	}
 }

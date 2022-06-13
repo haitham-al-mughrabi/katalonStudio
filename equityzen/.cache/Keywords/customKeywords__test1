@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "EBFC33DC7DFB50247A833F1124F6EEE4",
+  "keywordClasses": [
+    {
+      "name": "customKeywords.test1",
+      "keywordMethods": [
+        {
+          "name": "enableBrowserListeners",
+          "parameters": [
+            {
+              "name": "listenersClass",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Class",
+                "unresolvedClassName": "Class",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

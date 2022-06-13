@@ -35,8 +35,8 @@ public class handyMethods {
 	 * @return object
 	 */
 	@Keyword
-	def filterList(def array=null, def condition=null, def findall=false) {
-		if(array==null ||array.size==0||condition==null)
+	def filterList(def array, def condition=null, def findall=false) {
+		if(array.size==0||condition==null)
 			return null
 		if(findall)
 			return array.findAll {
@@ -48,10 +48,5 @@ public class handyMethods {
 				GroovyShell intilizedShell = new GroovyShell()
 				intilizedShell.evaluate("${it} ${condition} ")
 			}
-	}
-	@Keyword
-	def switchToSeleniumWebDriver() {
-		WebDriver seleniumDriver = DriverFactory.getWebDriver()
-		return seleniumDriver
 	}
 }

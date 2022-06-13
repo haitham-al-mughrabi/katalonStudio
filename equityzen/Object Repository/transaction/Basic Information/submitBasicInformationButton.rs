@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>submitBasicInformationButton</name>
+   <tag></tag>
+   <elementGuidId>e90d4256-deb0-4e20-b0ae-e4fcf7b93a48</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[.//span[text()='Submit']]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//button[.//span[text()='Submit']]</value>
+      <webElementGuid>8bd88765-0a04-4601-adfe-c77aedbd08cd</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

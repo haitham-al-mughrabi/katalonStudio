@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "19C56159619BF6C484BA5094446B42CE",
+  "keywordFileContentHash": "354824C3DE0205EF0896A01B917D7AF6",
   "keywordClasses": [
     {
       "name": "loginAndSignup.signup",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }

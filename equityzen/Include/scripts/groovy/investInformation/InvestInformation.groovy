@@ -1,4 +1,4 @@
-package equityzen
+package investInformation
 
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
@@ -19,35 +19,16 @@ import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-
+import haitham.TestObjectStuff as TOS
 import internal.GlobalVariable
 
-import org.openqa.selenium.WebDriver
-import com.kms.katalon.core.webui.driver.DriverFactory
-import org.openqa.selenium.By
-import haitham.TestObjectStuff as TOS
-public class removeElements {
-	@Keyword
-	def removeIntercomElement(){
-		try {
-			def tosInstence = new TOS()
-			WebUI.waitForElementPresent(tosInstence.createTestObject('intercomIframeObject', "//iframe/following-sibling::div[contains(@class,'intercom')]"), 5) 
-			boolean executionResponse = WebUI.executeJavaScript("""
-				let intercomWrapper = document.evaluate("//iframe/following-sibling::div[contains(@class,'intercom')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-				if(intercomWrapper!=null){
-					intercomWrapper.parentNode.removeChild(intercomWrapper)
-					return true
-				}
-				else if(intercomWrapper==null)
-					return false
-				""", [])
-			if(executionResponse ==true)
-				KeywordUtil.logInfo('Intercom wrapper has been successfully removed from the DOM')
-			else if(executionResponse ==false)
-				KeywordUtil.logInfo('Intercom wrapper can not be found on the DOM')
-		}
-		catch(Exception e) {
-			KeywordUtil.markError(e.toString())
+public class InvestInformation {
+	def investInformationVerification(List toVerify) {
+		def tosInstence = new TOS()
+		toVerify.each{
+			def object =tosInstence.createTestObject('testObject', it['xpath'])
+			if(WebUI.getText(object)==null)
+				KeywordUtil.markFailed("Element ${it['xpath']} is empty")
 		}
 	}
 }

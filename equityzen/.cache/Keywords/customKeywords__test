@@ -1,0 +1,20 @@
+{
+  "keywordFileContentHash": "01CAA39EC20BF435A921E2A89F00A660",
+  "keywordClasses": [
+    {
+      "name": "customKeywords.MyCustomWebEventListener",
+      "keywordMethods": []
+    },
+    {
+      "name": "customKeywords.BrowserListeners",
+      "keywordMethods": [
+        {
+          "name": "enableBrowserListeners",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}
