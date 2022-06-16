@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>iframe_divdiv</name>
+   <tag></tag>
+   <elementGuidId>10439e62-65d0-436a-bd2b-11d2a21219d5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//iframe[@name='x-hellosign-embedded']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>iframe[name=&quot;x-hellosign-embedded&quot;]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>/html[1]/body[1]/div[@class=&quot;x-hellosign-embedded x-hellosign-embedded--in-modal&quot;]/div[@class=&quot;x-hellosign-embedded__modal-content&quot;]/iframe[@class=&quot;x-hellosign-embedded__iframe&quot;][count(. | //iframe[@class = 'x-hellosign-embedded__iframe' and @name = 'x-hellosign-embedded' and @src = 'https://app.hellosign.com/editor/embeddedSign?signature_id=f5e05adbc565b5320450dafdd155548a&amp;token=ae663f56ac549df8ea40594ed048f190&amp;client_id=2e030b8b28e24d97be4ab250f5b94931&amp;debug=0&amp;user_culture=en-US&amp;parent_url=https%3A%2F%2Ftest-quality.nyc.equityzen.com%2Ftransaction%2Fee815795-5a32-4bc3-92d1-5bae7a4c6c7e%2F&amp;skip_domain_verification=1&amp;ux_version=2&amp;js_version=2.8.0' and @scrolling = 'no' and (text() = '
+  &lt;/div>
+&lt;/div>' or . = '
+  &lt;/div>
+&lt;/div>')]) = count(//iframe[@class = 'x-hellosign-embedded__iframe' and @name = 'x-hellosign-embedded' and @src = 'https://app.hellosign.com/editor/embeddedSign?signature_id=f5e05adbc565b5320450dafdd155548a&amp;token=ae663f56ac549df8ea40594ed048f190&amp;client_id=2e030b8b28e24d97be4ab250f5b94931&amp;debug=0&amp;user_culture=en-US&amp;parent_url=https%3A%2F%2Ftest-quality.nyc.equityzen.com%2Ftransaction%2Fee815795-5a32-4bc3-92d1-5bae7a4c6c7e%2F&amp;skip_domain_verification=1&amp;ux_version=2&amp;js_version=2.8.0' and @scrolling = 'no' and (text() = '
+  &lt;/div>
+&lt;/div>' or . = '
+  &lt;/div>
+&lt;/div>')])]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>iframe</value>
+      <webElementGuid>feebf45b-f11e-4247-8d06-add04afa5885</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>x-hellosign-embedded__iframe</value>
+      <webElementGuid>5afb8e39-49a9-45db-9a7e-f8d66f3d97e8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>x-hellosign-embedded</value>
+      <webElementGuid>de77cb61-d4cf-44b9-9e69-7fbf814f067b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>https://app.hellosign.com/editor/embeddedSign?signature_id=f5e05adbc565b5320450dafdd155548a&amp;token=ae663f56ac549df8ea40594ed048f190&amp;client_id=2e030b8b28e24d97be4ab250f5b94931&amp;debug=0&amp;user_culture=en-US&amp;parent_url=https%3A%2F%2Ftest-quality.nyc.equityzen.com%2Ftransaction%2Fee815795-5a32-4bc3-92d1-5bae7a4c6c7e%2F&amp;skip_domain_verification=1&amp;ux_version=2&amp;js_version=2.8.0</value>
+      <webElementGuid>f36bd0b8-4d9b-4916-8d8f-295e6113388a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>scrolling</name>
+      <type>Main</type>
+      <value>no</value>
+      <webElementGuid>00545542-28cd-4e1d-b45b-89328fa6ffad</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+  &lt;/div>
+&lt;/div></value>
+      <webElementGuid>684d2ee5-6826-4c77-8323-706e8d5bebc4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[@class=&quot;x-hellosign-embedded x-hellosign-embedded--in-modal&quot;]/div[@class=&quot;x-hellosign-embedded__modal-content&quot;]/iframe[@class=&quot;x-hellosign-embedded__iframe&quot;]</value>
+      <webElementGuid>1ba78154-18eb-4203-8b2d-17575af06d39</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//iframe[@name='x-hellosign-embedded']</value>
+      <webElementGuid>b9d77ad8-dc7d-4ff2-b3aa-97715d0a1af6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Back to Transaction'])[1]/following::iframe[1]</value>
+      <webElementGuid>700efaa5-873b-47ff-a7e4-ed5ac0c9b103</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='View details'])[2]/following::iframe[1]</value>
+      <webElementGuid>f4a1e7ff-3ad3-4286-9657-436e3a4e7a43</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/iframe</value>
+      <webElementGuid>0802b6ec-62c4-4136-90fc-5e31fd94af2f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//iframe[@name = 'x-hellosign-embedded' and @src = 'https://app.hellosign.com/editor/embeddedSign?signature_id=f5e05adbc565b5320450dafdd155548a&amp;token=ae663f56ac549df8ea40594ed048f190&amp;client_id=2e030b8b28e24d97be4ab250f5b94931&amp;debug=0&amp;user_culture=en-US&amp;parent_url=https%3A%2F%2Ftest-quality.nyc.equityzen.com%2Ftransaction%2Fee815795-5a32-4bc3-92d1-5bae7a4c6c7e%2F&amp;skip_domain_verification=1&amp;ux_version=2&amp;js_version=2.8.0' and (text() = '
+  &lt;/div>
+&lt;/div>' or . = '
+  &lt;/div>
+&lt;/div>')]</value>
+      <webElementGuid>807b6698-25aa-4656-b620-dfe8e5a1369e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

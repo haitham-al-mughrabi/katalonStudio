@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "F76BF0F366B0D3B61F5CEE8D52B9A8E9",
+  "keywordFileContentHash": "7AC3023049CFA81AE9EFCE3E2D9FA793",
   "keywordClasses": [
     {
       "name": "haitham.TestObjectStuff",
@@ -82,6 +82,38 @@
           "javadoc": ""
         },
         {
+          "name": "getTestObjectSignelXpath",
+          "parameters": [
+            {
+              "name": "testObjectPath",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "xpathIndex",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
           "name": "createTestObject",
           "parameters": [
             {
@@ -144,6 +176,25 @@
             },
             {
               "name": "selectorHolder",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "getTestObjectSignelXpath",
+          "parameters": [
+            {
+              "name": "testObjectPath",
               "initialExpression": "",
               "type": {
                 "fullClassName": "java.lang.String",

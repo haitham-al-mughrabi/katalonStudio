@@ -1,9 +1,149 @@
 {
-  "keywordFileContentHash": "7C0F858C26916F13A87DCAE92D7BD2BB",
+  "keywordFileContentHash": "582F89B4A8F58B1C80FAD38CEC7024C6",
   "keywordClasses": [
     {
-      "name": "haitham.BrowserStuff",
+      "name": "haitham.BrowserListnersOverrider",
       "keywordMethods": []
+    },
+    {
+      "name": "haitham.BrowserListeners",
+      "keywordMethods": [
+        {
+          "name": "enableBrowserListeners",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "swapBrowsers",
+          "parameters": [
+            {
+              "name": "browserName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "returnable",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Boolean",
+                "unresolvedClassName": "Boolean",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "execute",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Boolean",
+                "unresolvedClassName": "Boolean",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "switchToSeleniumWebDriver",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "browsersInformation",
+          "parameters": [
+            {
+              "name": "prob",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "getCurrentBrowser",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "swapBrowsers",
+          "parameters": [
+            {
+              "name": "browserName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "returnable",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Boolean",
+                "unresolvedClassName": "Boolean",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "swapBrowsers",
+          "parameters": [
+            {
+              "name": "browserName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "browsersInformation",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
     }
   ],
   "javadocParsed": true

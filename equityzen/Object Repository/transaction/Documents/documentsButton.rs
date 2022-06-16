@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>documentsButton</name>
+   <tag></tag>
+   <elementGuidId>51541e3a-cea4-4443-b727-fbb6d8aa3f0d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//h4[text()='Documents']/ancestor::div[@role='button']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//h4[text()='Documents']/ancestor::div[@role='button']</value>
+      <webElementGuid>a0bac77b-11d6-4891-90a9-beb97f4fbdba</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

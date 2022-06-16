@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Sign Document</name>
+   <tag></tag>
+   <elementGuidId>d701ad7c-0be8-4b5d-af72-15340b79e531</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[5]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>/html[1]/body[1]/div[6]/div[@class=&quot;ant-modal-root&quot;]/div[@class=&quot;ant-modal-wrap FullPageModal&quot;]/div[@class=&quot;ant-modal&quot;]/div[@class=&quot;ant-modal-content&quot;]/div[@class=&quot;ant-modal-body&quot;]/div[@class=&quot;flex-column full-width padding-y-2 padding-x-md-2 padding-x-xxl-0 margin-auto min-height-100vh max-width-sm padding-x-2 max-width-md&quot;]/div[@class=&quot;margin-top-3&quot;]/div[@class=&quot;margin-top-2&quot;]/div[@class=&quot;ant-row-flex margin-top-1&quot;]/div[@class=&quot;ant-col flex justify-end ant-col-xs-24 ant-col-xs-order-3 ant-col-sm-6 ant-col-sm-order-2 ant-col-md-5&quot;]/button[@class=&quot;ant-btn margin-y-1-half ant-btn-primary ant-btn-round ant-btn-lg&quot;][count(. | //button[@type = 'button' and @class = 'ant-btn margin-y-1-half ant-btn-primary ant-btn-round ant-btn-lg' and (text() = 'Sign Document' or . = 'Sign Document')]) = count(//button[@type = 'button' and @class = 'ant-btn margin-y-1-half ant-btn-primary ant-btn-round ant-btn-lg' and (text() = 'Sign Document' or . = 'Sign Document')])]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>e9b13122-b5a5-4ef4-96c1-b3ff3fb8cc95</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>5a7b6729-e367-47ef-b69c-ff546ee4a330</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>ant-btn margin-y-1-half ant-btn-primary ant-btn-round ant-btn-lg</value>
+      <webElementGuid>8ffe42bb-7284-47de-a5ed-ba38eefa7353</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Sign Document</value>
+      <webElementGuid>c9422de9-ded7-404e-99a2-3c286384660f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[6]/div[@class=&quot;ant-modal-root&quot;]/div[@class=&quot;ant-modal-wrap FullPageModal&quot;]/div[@class=&quot;ant-modal&quot;]/div[@class=&quot;ant-modal-content&quot;]/div[@class=&quot;ant-modal-body&quot;]/div[@class=&quot;flex-column full-width padding-y-2 padding-x-md-2 padding-x-xxl-0 margin-auto min-height-100vh max-width-sm padding-x-2 max-width-md&quot;]/div[@class=&quot;margin-top-3&quot;]/div[@class=&quot;margin-top-2&quot;]/div[@class=&quot;ant-row-flex margin-top-1&quot;]/div[@class=&quot;ant-col flex justify-end ant-col-xs-24 ant-col-xs-order-3 ant-col-sm-6 ant-col-sm-order-2 ant-col-md-5&quot;]/button[@class=&quot;ant-btn margin-y-1-half ant-btn-primary ant-btn-round ant-btn-lg&quot;]</value>
+      <webElementGuid>baf23f2a-c993-4097-a2b7-58d98b25c45e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[5]</value>
+      <webElementGuid>1420da3b-2322-43d4-80ee-23587400edf8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='W-9'])[1]/following::button[1]</value>
+      <webElementGuid>75429f8b-adc5-43e0-9e41-000e961c6b34</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign Document'])[1]/following::button[1]</value>
+      <webElementGuid>5ee086e3-c210-4db4-94fe-b17770c4c81c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Additional Requirements'])[1]/preceding::button[1]</value>
+      <webElementGuid>4e8617c4-65ca-47fa-b574-6a7a048aacde</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div[2]/button</value>
+      <webElementGuid>1428dd39-b788-4ce0-ae33-323903b2693c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button' and (text() = 'Sign Document' or . = 'Sign Document')]</value>
+      <webElementGuid>8f919300-1570-4da7-b8e1-d83631c6570b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

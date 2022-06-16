@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>taxClassificationInputField</name>
+   <tag></tag>
+   <elementGuidId>56678b6c-bd06-4778-bf6a-d931d077756d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//textarea[@data-qa-ref=&quot;text-input&quot;])[2]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>(//textarea[@data-qa-ref=&quot;text-input&quot;])[2]</value>
+      <webElementGuid>fb5387d0-5d0c-4dea-8f10-5299ab938ae8</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

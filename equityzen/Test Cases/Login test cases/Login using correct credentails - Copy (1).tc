@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Login using correct credentails - Copy (1)</name>
+   <tag>login</tag>
+   <comment></comment>
+   <testCaseGuid>faeccda5-cef4-4c9c-ad31-b1594d6195bc</testCaseGuid>
+</TestCaseEntity>

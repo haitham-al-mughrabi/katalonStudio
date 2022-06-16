@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>insertSigntureButton</name>
+   <tag></tag>
+   <elementGuidId>2d62d3c4-5b77-497d-8a2f-479cae274cc5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[text()='Insert']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//button[text()='Insert']</value>
+      <webElementGuid>162188e1-362a-4e49-b596-14d4ac86e14c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

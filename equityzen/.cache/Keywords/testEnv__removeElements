@@ -1,8 +1,8 @@
 {
-  "keywordFileContentHash": "53A2B96A501DBD7CD9A2FA7DCFA27129",
+  "keywordFileContentHash": "5D3645062D88D9C6AA544783F9F2F0B4",
   "keywordClasses": [
     {
-      "name": "equityzen.removeElements",
+      "name": "testEnv.removeElements",
       "keywordMethods": [
         {
           "name": "removeIntercomElement",

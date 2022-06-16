@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>documentIframe</name>
+   <tag></tag>
+   <elementGuidId>b5b06eeb-2d8a-473d-879d-b181935e2332</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div/iframe[contains(@class,'hellosign')]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//div/iframe[contains(@class,'hellosign')]</value>
+      <webElementGuid>10d61694-7f24-414a-8c05-002a052a2dec</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

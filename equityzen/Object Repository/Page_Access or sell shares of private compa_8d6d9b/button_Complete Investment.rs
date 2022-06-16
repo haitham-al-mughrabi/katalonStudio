@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Complete Investment</name>
+   <tag></tag>
+   <elementGuidId>acfeea63-3973-4187-88e6-b30cd340214a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>button.ant-btn.MyInvestmentsDetails--action-buttons.margin-bottom-1.margin-x-md-1-half.ant-btn-primary.ant-btn-lg</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>f42988a6-8db4-47a8-bd04-bb4170520fe7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>2562a8de-ad16-4125-b5a7-3bb804239e9c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>ant-btn MyInvestmentsDetails--action-buttons margin-bottom-1 margin-x-md-1-half ant-btn-primary ant-btn-lg</value>
+      <webElementGuid>16c6951b-8040-4c26-a821-7c1132b1dcea</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Complete Investment</value>
+      <webElementGuid>72b88306-199b-4af9-bb5a-db3265fad51b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;required-action&quot;)/button[@class=&quot;ant-btn MyInvestmentsDetails--action-buttons margin-bottom-1 margin-x-md-1-half ant-btn-primary ant-btn-lg&quot;]</value>
+      <webElementGuid>eb10eb3d-f50a-4d7a-a3c0-38348e6246d0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[2]</value>
+      <webElementGuid>e8bedb92-55e6-4afd-a1ec-f09dd6836065</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='required-action']/button</value>
+      <webElementGuid>c110cbb6-cc3c-46e8-ad10-906f82b05c08</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Live DDD Palantir'])[1]/following::button[1]</value>
+      <webElementGuid>62376390-9210-4e4f-bba4-27131991e86e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Back to My Investments'])[1]/following::button[1]</value>
+      <webElementGuid>a04bd7f5-6135-4c6c-b296-8ce92dad80b4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cancel Investment'])[1]/preceding::button[1]</value>
+      <webElementGuid>6b3d45c5-c2b0-4a7e-a820-6900c461b855</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/button</value>
+      <webElementGuid>06f128d4-e1b8-45d8-b256-07a7bf4fa2dc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button' and (text() = 'Complete Investment' or . = 'Complete Investment')]</value>
+      <webElementGuid>6f0a2034-b2b8-48f3-8777-60771780bd9f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

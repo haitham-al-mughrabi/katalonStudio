@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_View details</name>
+   <tag></tag>
+   <elementGuidId>b4a1514c-f626-4a76-9103-e07a188f2851</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign Document'])[2]/following::div[4]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.ant-collapse-header</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>77da1e8f-09d5-41f0-bb1f-1354a180fc67</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>ant-collapse-header</value>
+      <webElementGuid>734f997f-8db1-4d0d-8cd6-c8b02363dded</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>role</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>b427360a-191a-4b3f-a887-4db55af9f7c0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tabindex</name>
+      <type>Main</type>
+      <value>0</value>
+      <webElementGuid>ee819e2e-70c1-42bf-93ca-17944387b80b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-expanded</name>
+      <type>Main</type>
+      <value>false</value>
+      <webElementGuid>dbaffd5d-68a2-457a-b200-a0b4db1d9205</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>View details</value>
+      <webElementGuid>caedea64-abc7-44dd-8c69-610470f09186</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[6]/div[@class=&quot;ant-modal-root&quot;]/div[@class=&quot;ant-modal-wrap FullPageModal&quot;]/div[@class=&quot;ant-modal&quot;]/div[@class=&quot;ant-modal-content&quot;]/div[@class=&quot;ant-modal-body&quot;]/div[@class=&quot;flex-column full-width padding-y-2 padding-x-md-2 padding-x-xxl-0 margin-auto min-height-100vh max-width-sm padding-x-2 max-width-md&quot;]/div[@class=&quot;margin-top-3&quot;]/div[@class=&quot;margin-top-2&quot;]/div[@class=&quot;ant-row-flex margin-top-1&quot;]/div[@class=&quot;ant-col ant-col-xs-24 ant-col-xs-order-2 ant-col-sm-24 ant-col-sm-order-3&quot;]/div[@class=&quot;ant-collapse ant-collapse-borderless ant-collapse-icon-position-left&quot;]/div[@class=&quot;ant-collapse-item&quot;]/div[@class=&quot;ant-collapse-header&quot;]</value>
+      <webElementGuid>9ce8f322-8e1a-4395-af50-5df3b1ffdbb7</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign Document'])[2]/following::div[4]</value>
+      <webElementGuid>94458a4f-7a51-4d9a-a0cc-54a733ed35c3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='W-9'])[1]/following::div[5]</value>
+      <webElementGuid>c14fa816-4b69-4128-b7de-017d0ee9db6c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Additional Requirements'])[1]/preceding::div[1]</value>
+      <webElementGuid>ef6acf15-34e5-43a4-ad26-c545d861aeca</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Passport'])[1]/preceding::div[1]</value>
+      <webElementGuid>c14439b3-96f0-4c26-b031-02a0fa1c1f83</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='View details']/parent::*</value>
+      <webElementGuid>28b10f39-7d71-443e-b68d-b56d7e04d1cb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div[3]/div/div/div</value>
+      <webElementGuid>00311491-6225-465d-9272-e91ced5c6b6e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'View details' or . = 'View details')]</value>
+      <webElementGuid>b3bfb716-1875-41b9-a2fb-1fa15e9ce6c6</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

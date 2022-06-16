@@ -35,4 +35,10 @@ public class TestObjectStuff {
 		findTestObject(testObjectPath).getXpaths().forEach{xpathsList.add( it.getValue() )}
 		return xpathsList
 	}
+	@Keyword
+	def getTestObjectSignelXpath(String testObjectPath,int xpathIndex=0) {
+		def xpathsList=[]
+		findTestObject(testObjectPath).getXpaths().forEach{xpathsList.add( it.getValue() )}
+		return xpathsList[xpathIndex]
+	}
 }

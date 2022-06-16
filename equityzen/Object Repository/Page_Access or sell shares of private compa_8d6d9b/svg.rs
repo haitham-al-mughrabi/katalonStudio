@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>svg</name>
+   <tag></tag>
+   <elementGuidId>471a5525-46bd-46d0-a728-93fdc80ce430</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='W-9'])[2]/following::*[name()='svg'][2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>i.anticon.anticon-delete.icon-link-warning > svg</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>svg</value>
+      <webElementGuid>c3ec4b50-f5da-4e71-a579-7bd5b8e3c5ab</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>viewBox</name>
+      <type>Main</type>
+      <value>64 64 896 896</value>
+      <webElementGuid>f6dc13e6-3883-4050-a1cf-c667181a91a6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-icon</name>
+      <type>Main</type>
+      <value>delete</value>
+      <webElementGuid>2be7a742-5635-459c-8e51-3dd1e6cc5db6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>width</name>
+      <type>Main</type>
+      <value>1em</value>
+      <webElementGuid>7a653687-afc4-48d5-b7d7-ddbb1467eab3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>height</name>
+      <type>Main</type>
+      <value>1em</value>
+      <webElementGuid>0c8f0a70-c6ab-45a6-8909-f7471d2fbc62</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>fill</name>
+      <type>Main</type>
+      <value>currentColor</value>
+      <webElementGuid>c6324025-4369-4b6d-a573-d86afa353a45</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-hidden</name>
+      <type>Main</type>
+      <value>true</value>
+      <webElementGuid>72a28383-be2f-4e3f-88e5-cb710931aff8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>focusable</name>
+      <type>Main</type>
+      <value>false</value>
+      <webElementGuid>42161023-639b-4471-ba4e-703e8050aafb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[6]/div[@class=&quot;ant-modal-root&quot;]/div[@class=&quot;ant-modal-wrap FullPageModal&quot;]/div[@class=&quot;ant-modal&quot;]/div[@class=&quot;ant-modal-content&quot;]/div[@class=&quot;ant-modal-body&quot;]/div[@class=&quot;flex-column full-width padding-y-2 padding-x-md-2 padding-x-xxl-0 margin-auto min-height-100vh max-width-sm padding-x-2 max-width-md&quot;]/div[@class=&quot;margin-top-3&quot;]/div[@class=&quot;margin-top-2&quot;]/div[@class=&quot;ant-row-flex margin-top-1&quot;]/div[@class=&quot;ant-col ant-col-xs-24 ant-col-xs-order-2 ant-col-sm-24 ant-col-sm-order-3&quot;]/div[@class=&quot;ant-collapse ant-collapse-borderless ant-collapse-icon-position-left&quot;]/div[@class=&quot;ant-collapse-item ant-collapse-item-active&quot;]/div[@class=&quot;ant-collapse-content ant-collapse-content-active&quot;]/div[@class=&quot;ant-collapse-content-box&quot;]/div[@class=&quot;ant-row-flex&quot;]/div[@class=&quot;ant-col ant-col-xs-2 ant-col-md-1&quot;]/i[@class=&quot;anticon anticon-delete icon-link-warning&quot;]/svg[1]</value>
+      <webElementGuid>06f27d41-ba42-4c62-95d1-df35cd6ff6f8</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='W-9'])[2]/following::*[name()='svg'][2]</value>
+      <webElementGuid>fd0fd464-cdf9-40da-8300-b953cbc74cc8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='View details'])[1]/following::*[name()='svg'][3]</value>
+      <webElementGuid>e7d54b60-4f35-4233-88f0-fc8718232b46</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Additional Requirements'])[1]/preceding::*[name()='svg'][1]</value>
+      <webElementGuid>d5eba932-7d79-491e-b02d-c6725962eb11</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Passport'])[1]/preceding::*[name()='svg'][1]</value>
+      <webElementGuid>f10c2a37-71b7-482b-879c-b4ccce3c10db</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

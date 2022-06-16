@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>w9SignDocumentButton</name>
+   <tag></tag>
+   <elementGuidId>e1acaac9-5a52-4d67-acbb-978d376dd0ce</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//h4[text()='W-9']/../following-sibling::div[1]/button</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//h4[text()='W-9']/../following-sibling::div[1]/button</value>
+      <webElementGuid>b96582fa-872d-4524-b552-07f80619c01d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

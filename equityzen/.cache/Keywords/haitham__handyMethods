@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "AEF6A8E85845F6BA6850BF89D02B972D",
+  "keywordFileContentHash": "791B6F0614D45BFD29FB447CBB7719F3",
   "keywordClasses": [
     {
       "name": "haitham.handyMethods",
@@ -50,11 +50,6 @@
           "javadoc": ""
         },
         {
-          "name": "switchToSeleniumWebDriver",
-          "parameters": [],
-          "javadoc": ""
-        },
-        {
           "name": "filterList",
           "parameters": [
             {
@@ -103,11 +98,6 @@
               }
             }
           ],
-          "javadoc": ""
-        },
-        {
-          "name": "filterList",
-          "parameters": [],
           "javadoc": ""
         }
       ]
